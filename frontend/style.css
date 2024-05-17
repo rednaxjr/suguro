@@ -9,7 +9,7 @@
 }
 
 body {
-    background-color: rgba(241, 241, 241,0.5);
+    background-color: rgba(241, 241, 241, 0.5);
     font-family: sans-serif;
 
     width: 100%;
@@ -19,18 +19,19 @@ body {
 main {
     justify-content: center;
     align-items: center;
-   
+
     /* background-color: aqua; */
     height: 100vh;
-   
+
     position: relative;
 
 }
-.main-wrapper{
-    max-width: 80%;
+
+.content-wrapper {
+    max-width: 70%;
     min-width: 700px;
-    margin:0 auto;
-    height:auto;
+    margin: 0 auto;
+    height: auto;
 }
 
 
@@ -112,14 +113,80 @@ header nav ul li a.nav-link-button:hover {
 
 .inquiry-button {
     cursor: pointer;
-    font-size: 50px; 
+    font-size: 50px;
     background-color: #0f7fac;
     color: #ffffff;
-    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
-    padding: 12px 30px 12px 30px;
-    border:none;
+    padding: 15px 25px 15px 25px;
+    border: none;
     border-radius: 10px;
 }
+
 .inquiry-button:hover {
     background-color: #0d6588;
+    justify-content: space-evenly;
+}
+
+@media screen and (max-width: 800px) {
+    div.Company-Advantages {
+        display: none;
+    }
+}
+
+.our-service {
+    height: 500px;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+
+
+    .our-service-offer {
+        display: flex;
+        flex-direction: row;
+        align-items: start;
+        justify-content: space-evenly;
+        filter: drop-shadow(0 4px 3px rgb(0 0 0 / 0.07)) drop-shadow(0 2px 2px rgb(0 0 0 / 0.06));
+
+        .our-service-offer-container {
+            padding: 0px 10px 0px 10px;
+            width: 100%;
+
+            .our-service-offer-container-products {
+                border-radius: 10px;
+                width: 100%;
+                height: 350px;
+                box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.25);
+                background-color: white;
+
+                .our-service-offer-container-products-icon {
+                    height: 75px;
+                    padding-top: 25px;
+                    display: flex;
+                    justify-content: center;
+                }
+
+                .our-service-offer-container-products-title {
+                    text-align: center;
+                    margin-top: 25px;
+                    font-weight: 400;
+
+                }
+
+                .our-service-offer-container-products-description {
+                    text-align: center;
+                    margin-top: 25px;
+                    padding: 0px 25px 0px 25px;
+                    font-weight: 400;
+                    text-align: center;
+                }
+            }
+        }
+
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .our-service-offer {
+        display: flex;
+        flex-direction: column;
+    }
 }
