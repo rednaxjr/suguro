@@ -6,6 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="../style.css" rel="stylesheet" type="text/css" />
     <script src="../index.js" type="text/javascript" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet">
     <title>Suguro</title>
   </head>
   <body>
@@ -113,19 +118,29 @@
       <div class="About-Us"
         style="padding-top: 25px;background-color: #ffffff;">
         <div class="content-wrapper">
-          <div style=" display: flex; ">
+          <div style=" display: flex; padding-bottom:50px">
             <div
-              style="width:100%; height:500px; padding:15px 25px 15px 0px;">
+              style="width:100%; height:auto; padding:15px 25px 15px 0px;">
               <div style="width:100%;   height:100%;">
                 <div
-                  style="height:75px; width:100%;  align-items: center;display: flex;">
-                  <span
-                    style="font-size:24px; font-weight: 700; padding:10px 25px 10px 25px; color:#0f7fac; letter-spacing: 1px;">
-                    <p>About Wheba</p>
-                  </span>
+                  style="height:75px; width:100%;  align-items: center;display: flex; margin-top:50px; color:#0f7fac;">
+
+                  <h3
+                    style="  font-weight: 500; padding:10px 25px 10px 25px;  letter-spacing: 1px;">About
+                    Wheba</h3>
+                  <svg xmlns="http://www.w3.org/2000/svg"
+                    class="icon icon-tabler icon-tabler-caret-right-filled"
+                    width="28" height="25" viewBox="0 0 24 24"
+                    stroke-width="1.5" stroke="#0f7fac" fill="none"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path
+                      d="M9 6c0 -.852 .986 -1.297 1.623 -.783l.084 .076l6 6a1 1 0 0 1 .083 1.32l-.083 .094l-6 6l-.094 .083l-.077 .054l-.096 .054l-.036 .017l-.067 .027l-.108 .032l-.053 .01l-.06 .01l-.057 .004l-.059 .002l-.059 -.002l-.058 -.005l-.06 -.009l-.052 -.01l-.108 -.032l-.067 -.027l-.132 -.07l-.09 -.065l-.081 -.073l-.083 -.094l-.054 -.077l-.054 -.096l-.017 -.036l-.027 -.067l-.032 -.108l-.01 -.053l-.01 -.06l-.004 -.057l-.002 -12.059z"
+                      stroke-width="0" fill="currentColor" />
+                  </svg>
                 </div>
                 <div class
-                  style="width:100%;      padding:10px 25px 10px 25px;">
+                  style="width:100%;      padding:10px 25px 10px 25px;display: none; ">
                   <span
                     style="font-size:14px; font-weight: 500;text-align: justify;color: rgba(0, 0, 0,0.5); line-height: 1.6; letter-spacing: 1px;">
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -146,110 +161,102 @@
                 </div>
               </div>
             </div>
+
             <div class="About-Us-Slider"
-              style="width:100%;border:1px solid black;">
-              <div style=" border:1px solid black;position: relative;">
-                <div class="position:absolute; width:100%">
-                  <div class="About-Sliders-Slides"
-                    style="display:flex;width:300%; ">
-                    <div class="mySlides fade" style=" ">
-                      <p style="width:100%;border:1px solid black; padding:25px 10px 25px 10px;">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Illo necessitatibus, voluptatum, labore sint explicabo
-                        dolore et sit odit quam, dolorem voluptas sunt similique
-                        possimus. Ut vel obcaecati alias harum iusto?
-                      </p>
-                      <!-- <img src="../assets/img/bg-image1.jpg" style="width:100%"> -->
+              style="width:50%;  ">
+              <div class="About-Sliders-Container">
+                <div
+                  style="position:absolute;top:0;right:10px;align-items: center;z-index:3;">
+                  <p style="display:flex;align-items: center;">
+                    <span style="display:flex;align-items: center;" onclick="getData()">
+                      <svg  
+                      xmlns="http://www.w3.org/2000/svg"
+                        class="icon icon-tabler icon-tabler-chevron-left"
+                        width="28" height="25" viewBox="0 0 24 24"
+                        stroke-width="3" stroke="#0f7fac" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M15 6l-6 6l6 6" />
+                      </svg>
+                    </span>
+                    <span style="font-size:18.72px;align-items: center;"
+                      id="currentSlide"></span>
+                    <span
+                      style="font-size:18.72px;align-items: center;">/</span>
+                    <span style="font-size:18.72px;align-items: center;"
+                      id="slideLength"></span>
+                    <span style="display:flex;align-items: center;">
+                      <svg xmlns="http://www.w3.org/2000/svg"
+                        class="icon icon-tabler icon-tabler-chevron-right"
+                        width="28" height="25" viewBox="0 0 24 24"
+                        stroke-width="3" stroke="#0f7fac" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M9 6l6 6l-6 6" />
+                      </svg>
+                    </span>
+                  </p>
+                </div>
+                <div class="Image-Slider">
+                  <div class="Image-Slider-Slide Image-Slider-Slide-Active">
+                    <div
+                      style="width:100%;  ">
+                      <div class="Image-Slider-Slide-Inner"
+                        style="height:250px; position:relative;">
 
+                        <h3
+                          style="padding: 4px 0px 30px 0px;  font-weight: 500;letter-spacing: 2px;color:#0f7fac; ">Get
+                          Top Employee </h3>
+                        <p
+                          style=" font-size:14px; font-weight: 500;text-align: justify;color: rgba(0, 0, 0,0.5); line-height: 1.6; letter-spacing: 1px;">Suguro
+                          Tech. gurantee you employed the top employee's
+                          that can make your company grow high.</p>
+                      </div>
                     </div>
+                  </div>
+                  <div class="Image-Slider-Slide">
+                    <div
+                      style="width:100%;  ">
+                      <div class="Image-Slider-Slide-Inner"
+                        style="height:250px; position:relative;">
 
-                    <div class="mySlides fade">
-                      <p style="width:100%;border:1px solid black;padding:25px 10px 25px 10px;">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Illo necessitatibus, voluptatum, labore sint explicabo
-                        dolore et sit odit quam, dolorem voluptas sunt similique
-                        possimus. Ut vel obcaecati alias harum iusto?
-                      </p>
-                      <!-- <img src="../assets/img/bg-image1.jpg" style="width:100%"> -->
-
+                        <h3
+                          style="padding: 4px 0px 30px 0px;  font-weight: 500;letter-spacing: 2px;color:#0f7fac; ">Risk
+                          Free </h3>
+                        <p
+                          style=" font-size:14px; font-weight: 500;text-align: justify;color: rgba(0, 0, 0,0.5); line-height: 1.6; letter-spacing: 1px;">Suguro
+                          Suguro Technology does not need any deposits or
+                          upfront costs. We keep hiring until you discover the
+                          ideal employee. No contracts that are fixed.</p>
+                      </div>
                     </div>
+                  </div>
+                  <div class="Image-Slider-Slide">
+                    <div
+                      style="width:100%;  ">
+                      <div class="Image-Slider-Slide-Inner"
+                        style="height:250px; position:relative;">
 
-                    <div class="mySlides fade">
-                      <p style="width:100%;border:1px solid black;padding:25px 10px 25px 10px;">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Illo necessitatibus, voluptatum, labore sint explicabo
-                        dolore et sit odit quam, dolorem voluptas sunt similique
-                        possimus. Ut vel obcaecati alias harum iusto?
-                      </p>
-                      <!-- <img src="../assets/img/bg-image1.jpg" style="width:100%"> -->
-
+                        <h3
+                          style="padding: 4px 0px 30px 0px;  font-weight: 500;letter-spacing: 2px;color:#0f7fac; ">Build
+                          long-term value. </h3>
+                        <p
+                          style=" font-size:14px; font-weight: 500;text-align: justify;color: rgba(0, 0, 0,0.5); line-height: 1.6; letter-spacing: 1px;">
+                          d.</p>
+                      </div>
                     </div>
-
+                  </div>
+                  <div class="navigation">
+                    <div class="text-slides-button"> </div>
+                    <div class="text-slides-button"> </div>
+                    <div class="text-slides-button"> </div>
                   </div>
                 </div>
               </div>
             </div>
-            <!-- <div
-              class="About-Sliders"
-              style="width:60%;    ">
-                
-                <div class="About-Sliders-Container" style="overflow:  ;">
-                  <div class="About-Sliders-Slides" style="display:flex;width:290%; ">
-                    <input type="radio" name="About-Sliders-Slides-Radio-button" id="radio1"/>
-                    <input type="radio" name="About-Sliders-Slides-Radio-button" id="radio2"/>
-                    <input type="radio" name="About-Sliders-Slides-Radio-button" id="radio3"/>
-                    <div class="slide first" style="text-align: justify; padding:25px 15px 25px 15px;">
-                      <span style="">
-                  
-                        <p style="color: #0f7fac;font-size: 16px;">
-                          Get Excellent Staff 
-                        </p>
-                          elit. Aspernatur vel doloribus deserunt, voluptates
-                          voluptatum itaque ad ipsum omnis repellat, modi sed
-                          harum? Dolorum sequi impedit excepturi architecto
-                          optio,
-                          voluptate nesciunt?
-                      </span>
-                    </div>
-                    <div class="slide ">
-                      <span>
-                        <p>2nd Lorem ipsum dolor sit amet consectetur
-                          adipisicing
-                          elit. Facere distinctio corrupti sequi tempora
-                          incidunt
-                          veritatis voluptatum rem, explicabo similique, aliquam
-                          ut modi. Quae iure ullam sunt quo voluptates. Earum,
-                          minus.</p>
-                      </span>
-                    </div>
-                    <div class="slide ">
-                      <span>
-                        <p>3rd Lorem ipsum dolor sit amet, consectetur
-                          adipisicing
-                          elit. Velit recusandae placeat, officia ab doloribus
-                          cum
-                          debitis illum. Reprehenderit quam ullam sapiente neque
-                          facilis quas consequatur rerum accusamus qui suscipit.
-                          Perferendis.</p>
-                      </span>
-                    </div>
-                    <div class="navigation-auto">
-                      <div class="auto-btn1"></div>
-                      <div class="auto-btn2"></div>
-                      <div class="auto-btn3"></div>
-                    </div>
-                  </div>
-
-                </div> 
-            </div> -->
-
           </div>
         </div>
       </div>
-      <!-- <div class="Carousel" style="width:100%; height:auto">
-        
-      </div> -->
-
       <div class="our-service ">
         <div class="content-wrapper" style="padding-top:50px;">
           <div
@@ -356,6 +363,76 @@
   </body>
 
 </html>
-<script>
+<script type="text/javascript">
+  var counter = 1;
+  var slides=document.querySelectorAll('.Image-Slider-Slide');
+  var buttons = document.querySelectorAll('.text-slides-button');
+  var slideLength = slides.length;
+   
+  var currentSlide = 1;
+  var currentSlideDisplay = 0;
 
+  // document.getElementById("currentSlide").innerHTML = currentSlideDisplay;
+  document.getElementById("slideLength").innerHTML = slideLength;
+  
+  // let manualNav = function(manual){ 
+  //   slides.forEach((slide)=>{
+  //     slide.classList.remove('Image-Slider-Slide-Active')
+  //   });
+  //   buttons.forEach((btn)=>{
+  //     btn.classList.remove('Image-Slider-Slide-Active');
+  //   });
+  // slides[manual].classList.add('Image-Slider-Slide-Active')
+  // buttons[manual].classList.add('Image-Slider-Slide-Active')
+  // }
+  // buttons.forEach((btn, i )=>{
+  //   btn.addEventListener("click", ()=>{
+  //     manualNav(i);
+  //     currentSlide = i; 
+  //   })
+  // });
+  var repeat =function(activeClass){ 
+   
+    let active=document.getElementsByClassName('Image-Slider-Slide-Active')
+    let i =1;  
+    let j =1 ;
+    let temp = 0;
+     document.getElementById("currentSlide").innerHTML = j; 
+    
+    var repeater = () =>{  
+      setTimeout(function(){
+        [...active].forEach((activeClass)=>{
+          activeClass.classList.remove('Image-Slider-Slide-Active')
+        });
+         
+        slides[i].classList.add('Image-Slider-Slide-Active');
+        buttons[i].classList.add('Image-Slider-Slide-Active');
+        i++;  
+        if( i < slides.length ){ 
+            j=i;
+             document.getElementById("currentSlide").innerHTML = j; 
+        }else if(slides.length == i){
+          i = 0;   
+          j = slides.length; 
+          document.getElementById("currentSlide").innerHTML = j; 
+        } 
+        if(i >= slides.length){  
+          return;
+        } 
+        repeater();
+      },5000);
+       
+    }
+    repeater();
+  }
+  repeat();
+  function getData(){ 
+    let slides=document.querySelectorAll('.Image-Slider-Slide');
+    console.log("aaa")
+
+    alert(slides.length)     
+  }
+  
+
+ 
 </script>
