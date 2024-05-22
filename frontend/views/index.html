@@ -1,336 +1,412 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link href="../style.css" rel="stylesheet" type="text/css" />
-  <script src="../index.js" type="text/javascript" defer></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
-  <title>Suguro</title>
-</head>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="../style.css" rel="stylesheet" type="text/css" />
+    <script src="../index.js" type="text/javascript" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet">
+    <title>Suguro</title>
+  </head>
 
-<body>
-  <header style="display: flex;justify-content: space-between;">
-    <div class="logo_container" style=" width:auto ;display: flex;">
-      <div class="logo" style="height:40px; width: 40px;border:1px solid black;">
-        <div class></div>
+  <body>
+    <header style="display: flex;justify-content: space-between;">
+      <div class="logo_container" style=" width:auto ;display: flex;">
+        <div class="logo"
+          style="height:40px; width: 40px;border:1px solid black;">
+          <div class></div>
+        </div>
+        <div class="logo_banner">
+          <span>
+            <p style="font-size: 20px;font-weight: 700;">Logo Name</p>
+            <p style="font-size: 14px; color:#0f7fac;font-weight: 400;">Logo
+              Motto</p>
+          </span>
+        </div>
       </div>
-      <div class="logo_banner">
-        <span>
-          <p style="font-size: 20px;font-weight: 700;">Logo Name</p>
-          <p style="font-size: 14px; color:#0f7fac;font-weight: 400;">Logo
-            Motto</p>
-        </span>
-      </div>
-    </div>
-    <nav>
-      <ul style="display: flex; ">
-        <li class="nav-item "><a class="nav-link  active">
-            <p>ホーム</p>
-          </a></li>
-        <li class="nav-item "><a class="nav-link  inactive">会社概要</a></li>
-        <li class="nav-item "><a class="nav-link  inactive">問い合わせ</a></li>
+      <nav>
+        <ul style="display: flex; ">
+          <li class="nav-item "><a class="nav-link  active">
+              <p>ホーム</p>
+            </a></li>
+          <li class="nav-item "><a class="nav-link  inactive">会社概要</a></li>
+          <li class="nav-item "><a class="nav-link  inactive">問い合わせ</a></li>
 
-        <li class="nav-item " style="border-right: 1px solid rgb(71, 71, 71);"><a class="nav-link  nav-link-button "
-            style>雇用機会</a></li>
-        <li class="nav-item   "><a class="nav-link  inactive">ログイン</a></li>
-        <li class="nav-item inactive"><a class="nav-link  ">search</a></li>
-      </ul>
+          <li class="nav-item "
+            style="border-right: 1px solid rgb(71, 71, 71);"><a
+              class="nav-link  nav-link-button "
+              style>雇用機会</a></li>
+          <li class="nav-item   "><a class="nav-link  inactive">ログイン</a></li>
+          <li class="nav-item inactive"><a class="nav-link  ">search</a></li>
+        </ul>
 
-    </nav>
-  </header>
-  <main>
-    <div style="position:relative; ">
-      <!-- <div
+      </nav>
+    </header>
+    <main>
+      <div style="position:relative; ">
+        <!-- <div
           style="height:100%; background-color:  rgba(145, 140, 140, 0.5) ; width: 100%;position:absolute; z-index: -1;">
 
         </div> -->
-      <div class="content-wrapper">
-        <!-- <div
+        <div class="content-wrapper">
+          <!-- <div
             style="  position:absolute; z-index: -1; background-image: url('../assets/img/bg-image1.jpg');
           background-repeat:no-repeat;background-size: cover  ;height: 100%;width: 100%;">
 
           </div> -->
-        <div class="wrapper-body"
-          style=" height:auto; width:100%;justify-content:center;padding:50px 0px 50px 0px;    ">
-          <div class=" "
-            style="   display: flex; justify-content: center;align-items: center;text-align: center; font-size: 24px;font-weight: 400;color:  #4d4a4a;">
-            <span style="letter-spacing: 1px;">
-              <p>ビジネスのすべてのタスクを時間通りに完了するのは難しいと感じていますか?</p>
-            </span>
-          </div>
-          <div class=" "
-            style="   display: flex; justify-content: center;align-items: center;text-align: center; font-size: 65px;font-weight: 700; color:  #312d2d; ">
-            <span style="letter-spacing: 5px; margin-top:15px;">
-              <p>「会社名」をご紹介します</p>
-            </span>
-          </div>
-          <div class=" "
-            style="   display: flex; justify-content: center;align-items: center;text-align: center; font-size: 26px;font-weight: 500;color:  #0f7fac; margin-top:25px;">
-            <span style="letter-spacing: 1px;">
-              <p> どこにいても 必要なサービスを提供します。</p>
-            </span>
-          </div>
-          <div class style="display:flex;align-items: center;justify-content: center; margin-top: 50px;">
-            <button class="button inquiry-button" style>問い合わせ >></button>
-          </div>
-          <div class="Company-Advantages">
-            <div
-              style="display:flex; justify-content:space-evenly;align-items:center; width:100%; font-size: 26px; padding-top: 50px; ">
-              <div style="display: flex;   ">
-                <img src="../assets/img/checked.png" style="height: 35px;width: 60px;">
-                <span style="margin-left:5px;">
+          <div class="wrapper-body"
+            style=" height:auto; width:100%;justify-content:center;padding:50px 0px 50px 0px;    ">
+            <div class=" "
+              style="   display: flex; justify-content: center;align-items: center;text-align: center; font-size: 24px;font-weight: 400;color:  #4d4a4a;">
+              <span style="letter-spacing: 1px;">
+                <p>ビジネスのすべてのタスクを時間通りに完了するのは難しいと感じていますか?</p>
+              </span>
+            </div>
+            <div class=" "
+              style="   display: flex; justify-content: center;align-items: center;text-align: center; font-size: 65px;font-weight: 700; color:  #312d2d; ">
+              <span style="letter-spacing: 5px; margin-top:15px;">
+                <p>「会社名」をご紹介します</p>
+              </span>
+            </div>
+            <div class=" "
+              style="   display: flex; justify-content: center;align-items: center;text-align: center; font-size: 26px;font-weight: 500;color:  #0f7fac; margin-top:25px;">
+              <span style="letter-spacing: 1px;">
+                <p> どこにいても 必要なサービスを提供します。</p>
+              </span>
+            </div>
+            <div class
+              style="display:flex;align-items: center;justify-content: center; margin-top: 50px;">
+              <button class="button inquiry-button" style>問い合わせ >></button>
+            </div>
+            <div class="Company-Advantages">
+              <div
+                style="display:flex; justify-content:space-evenly;align-items:center; width:100%; font-size: 26px; padding-top: 50px; ">
+                <div style="display: flex;   ">
+                  <img src="../assets/img/checked.png"
+                    style="height: 35px;width: 60px;">
+                  <span style="margin-left:5px;">
 
-                  <p>信頼性のある</p>
-                </span>
-              </div>
-              <div style="display: flex;">
-                <img src="../assets/img/checked.png" style="height: 35px;width: 60px;">
-                <span style="margin-left:5px;">
-                  <p> 速い労働者</p>
-                </span>
-              </div>
-              <div style="display: flex;">
-                <img src="../assets/img/checked.png" style="height: 35px;width: 60px;">
-                <span style="margin-left:5px;">
-                  <p>わからない</p>
-                </span>
+                    <p>信頼性のある</p>
+                  </span>
+                </div>
+                <div style="display: flex;">
+                  <img src="../assets/img/checked.png"
+                    style="height: 35px;width: 60px;">
+                  <span style="margin-left:5px;">
+                    <p> 速い労働者</p>
+                  </span>
+                </div>
+                <div style="display: flex;">
+                  <img src="../assets/img/checked.png"
+                    style="height: 35px;width: 60px;">
+                  <span style="margin-left:5px;">
+                    <p>わからない</p>
+                  </span>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <div>
-    </div>
+      <div>
+      </div>
 
-    <div class="About-Us" style="padding-top: 25px;background-color: #ffffff;">
-      <div class="content-wrapper">
-        <div style=" display: flex; padding-bottom:50px">
-          <div style="width:100%; height:auto; padding:15px 25px 15px 0px;">
-            <div style="width:100%;   height:100%;">
-              <div style="height:75px; width:100%;  align-items: center;display: flex; margin-top:50px; color:#0f7fac;" class="collapsible">
+      <div class="About-Us"
+        style="padding: 50px 0px 50px 0px;background-color: #F8F8F7;overflow: hidden;">
+        <div class="content-wrapper">
+          <div style=" display: flex; padding-bottom:50px">
+            <div style="width:100%;   padding:0px 25px 15px 0px;">
+              <div style="width:100%;   height:auto;  "
+                class="collapseContainer">
+                <div
+                  class
+                  style="   padding:0px  0px 20px 0px;    color:#0f7fac;">
+                  <div class="collapseTrigger"
+                    style="  align-items: center;display: flex; cursor: pointer;"
+                    onclick="collapseAbout()">
 
-                <h3 style="  font-weight: 500; padding:10px 25px 10px 25px;  letter-spacing: 1px;">About
-                  Wheba</h3>
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-caret-right-filled"
-                  width="28" height="25" viewBox="0 0 24 24" stroke-width="1.5" stroke="#0f7fac" fill="none"
-                  stroke-linecap="round" stroke-linejoin="round">
-                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                  <path
-                    d="M9 6c0 -.852 .986 -1.297 1.623 -.783l.084 .076l6 6a1 1 0 0 1 .083 1.32l-.083 .094l-6 6l-.094 .083l-.077 .054l-.096 .054l-.036 .017l-.067 .027l-.108 .032l-.053 .01l-.06 .01l-.057 .004l-.059 .002l-.059 -.002l-.058 -.005l-.06 -.009l-.052 -.01l-.108 -.032l-.067 -.027l-.132 -.07l-.09 -.065l-.081 -.073l-.083 -.094l-.054 -.077l-.054 -.096l-.017 -.036l-.027 -.067l-.032 -.108l-.01 -.053l-.01 -.06l-.004 -.057l-.002 -12.059z"
-                    stroke-width="0" fill="currentColor" />
-                </svg>
+                    <h3
+                      style="  font-weight: 500;   letter-spacing: 1px;">About
+                      Wheba</h3>
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                      class="icon icon-tabler icon-tabler-caret-right-filled collapseIcon"
+                      width="28" height="25" viewBox="0 0 24 24"
+                      stroke-width="1.5" stroke="#0f7fac" fill="none"
+                      stroke-linecap="round" stroke-linejoin="round">
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                      <path
+                        d="M9 6c0 -.852 .986 -1.297 1.623 -.783l.084 .076l6 6a1 1 0 0 1 .083 1.32l-.083 .094l-6 6l-.094 .083l-.077 .054l-.096 .054l-.036 .017l-.067 .027l-.108 .032l-.053 .01l-.06 .01l-.057 .004l-.059 .002l-.059 -.002l-.058 -.005l-.06 -.009l-.052 -.01l-.108 -.032l-.067 -.027l-.132 -.07l-.09 -.065l-.081 -.073l-.083 -.094l-.054 -.077l-.054 -.096l-.017 -.036l-.027 -.067l-.032 -.108l-.01 -.053l-.01 -.06l-.004 -.057l-.002 -12.059z"
+                        stroke-width="0" fill="currentColor" />
+                    </svg>
+                  </div>
+                </div>
+                <div class="About-Us-Description">
+                  <span
+                    class="About-Us-Description-text">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Tenetur accusamus doloribus alias ducimus esse eaque quod
+                      error
+                      deleniti sit facilis assumenda, qui molestias? Voluptas
+                      amet dolores, modi in corporis velit! <br><br>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Aliquid cum alias assumenda mollitia animi nulla ullam
+                      ratione, odio esse nostrum placeat quo debitis molestias
+                      eius nisi voluptas laudantium fugiat saepe!<br><br>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Aliquid cum alias assumenda mollitia animi nulla ullam
+                      ratione, odio esse nostrum placeat quo debitis molestias
+                      eius nisi voluptas laudantium fugiat saepe!
+                    </p>
+                  </span>
+                </div>
               </div>
-              <div class style="width:100%;      padding:10px 25px 10px 25px;   transition: max-height 0.2s ease-out; overflow: hidden;  max-height: 0;">
-                <span
-                  style="font-size:14px; font-weight: 500;text-align: justify;color: rgba(0, 0, 0,0.5); line-height: 1.6; letter-spacing: 1px;">
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Tenetur accusamus doloribus alias ducimus esse eaque quod
-                    error
-                    deleniti sit facilis assumenda, qui molestias? Voluptas
-                    amet dolores, modi in corporis velit! <br><br>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Aliquid cum alias assumenda mollitia animi nulla ullam
-                    ratione, odio esse nostrum placeat quo debitis molestias
-                    eius nisi voluptas laudantium fugiat saepe!<br><br>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Aliquid cum alias assumenda mollitia animi nulla ullam
-                    ratione, odio esse nostrum placeat quo debitis molestias
-                    eius nisi voluptas laudantium fugiat saepe!
+            </div>
+
+            <div class="About-Us-Slider"
+              style="width:50%; position: relative; ">
+              <div style="position:absolute; top:-20px;left:-150px;">
+                <img src="../assets/img/circle.png" style="opacity: 15%; " />
+              </div>
+              <div style="position:absolute; top:-120px;right:-180px;">
+                <img src="../assets/img/circle.png" height="250"
+                  style="opacity: 15%; " />
+              </div>
+              <!-- <div style="position:absolute; top:-150px;right:-450px;  ">
+                <img src="../assets/img/faded-dot-long.png" height="250" style="opacity: 5%;   transform: rotate(-45deg);  " />
+              </div> -->
+
+              <div class="About-Sliders-Container">
+                <div
+                  style="position:absolute;top:0;right:10px;align-items: center;z-index:3;">
+                  <p style="display:flex;align-items: center;">
+                    <span style="display:flex;align-items: center;"
+                      onclick="plusSlides(-1)">
+                      <svg xmlns="http://www.w3.org/2000/svg"
+                        class="icon icon-tabler icon-tabler-chevron-left"
+                        width="28"
+                        height="25" viewBox="0 0 24 24" stroke-width="3"
+                        stroke="#0f7fac" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M15 6l-6 6l6 6" />
+                      </svg>
+                    </span>
+                    <span style="font-size:18.72px;align-items: center;"
+                      id="currentSlide"></span>
+                    <span
+                      style="font-size:18.72px;align-items: center;">/</span>
+                    <span style="font-size:18.72px;align-items: center;"
+                      id="slideLength"></span>
+                    <span style="display:flex;align-items: center;"
+                      onclick="plusSlides(1)">
+                      <svg xmlns="http://www.w3.org/2000/svg"
+                        class="icon icon-tabler icon-tabler-chevron-right"
+                        width="28" height="25" viewBox="0 0 24 24"
+                        stroke-width="3" stroke="#0f7fac" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M9 6l6 6l-6 6" />
+                      </svg>
+                    </span>
                   </p>
-                </span>
-              </div>
-            </div>
-          </div>
+                </div>
+                <div class="Image-Slider">
+                  <div class="Image-Slider-Slide Image-Slider-Slide-Active">
+                    <div style="width:100%;  ">
+                      <div class="Image-Slider-Slide-Inner"
+                        style="height:250px; position:relative;">
 
-          <div class="About-Us-Slider" style="width:50%;  ">
-            <div class="About-Sliders-Container">
-              <div style="position:absolute;top:0;right:10px;align-items: center;z-index:3;">
-                <p style="display:flex;align-items: center;">
-                  <span style="display:flex;align-items: center;" onclick="decreaseSlide()">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="28"
-                      height="25" viewBox="0 0 24 24" stroke-width="3" stroke="#0f7fac" fill="none"
-                      stroke-linecap="round" stroke-linejoin="round">
-                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                      <path d="M15 6l-6 6l6 6" />
-                    </svg>
-                  </span>
-                  <span style="font-size:18.72px;align-items: center;" id="currentSlide"></span>
-                  <span style="font-size:18.72px;align-items: center;">/</span>
-                  <span style="font-size:18.72px;align-items: center;" id="slideLength"></span>
-                  <span style="display:flex;align-items: center;" onclick="increaseSlide()">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-right"
-                      width="28" height="25" viewBox="0 0 24 24" stroke-width="3" stroke="#0f7fac" fill="none"
-                      stroke-linecap="round" stroke-linejoin="round">
-                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                      <path d="M9 6l6 6l-6 6" />
-                    </svg>
-                  </span>
-                </p>
-              </div>
-              <div class="Image-Slider">
-                <div class="Image-Slider-Slide Image-Slider-Slide-Active">
-                  <div style="width:100%;  ">
-                    <div class="Image-Slider-Slide-Inner" style="height:250px; position:relative;">
-
-                      <h3 style="padding: 4px 0px 30px 0px;  font-weight: 500;letter-spacing: 2px;color:#0f7fac; ">Get
-                        Top Employee </h3>
-                      <p
-                        style=" font-size:14px; font-weight: 500;text-align: justify;color: rgba(0, 0, 0,0.5); line-height: 1.6; letter-spacing: 1px;">
-                        Suguro
-                        Tech. gurantee you employed the top employee's
-                        that can make your company grow high.</p>
+                        <h3>Get
+                          Top Employee </h3>
+                        <p>
+                          Suguro
+                          Tech. gurantee you employed the top employee's
+                          that can make your company grow high.</p>
+                      </div>
                     </div>
                   </div>
-                </div>
-                <div class="Image-Slider-Slide">
-                  <div style="width:100%;  ">
-                    <div class="Image-Slider-Slide-Inner" style="height:250px; position:relative;">
+                  <div class="Image-Slider-Slide">
+                    <div style="width:100%;  ">
+                      <div class="Image-Slider-Slide-Inner"
+                        style="height:250px; position:relative;">
 
-                      <h3 style="padding: 4px 0px 30px 0px;  font-weight: 500;letter-spacing: 2px;color:#0f7fac; ">Risk
-                        Free </h3>
-                      <p
-                        style=" font-size:14px; font-weight: 500;text-align: justify;color: rgba(0, 0, 0,0.5); line-height: 1.6; letter-spacing: 1px;">
-                        Suguro
-                        Suguro Technology does not need any deposits or
-                        upfront costs. We keep hiring until you discover the
-                        ideal employee. No contracts that are fixed.</p>
+                        <h3> Risk Free </h3>
+                        <p>
+                          Suguro
+                          Suguro Technology does not need any deposits or
+                          upfront costs. We keep hiring until you discover the
+                          ideal employee. No contracts that are fixed.</p>
+                      </div>
                     </div>
                   </div>
-                </div>
-                <div class="Image-Slider-Slide">
-                  <div style="width:100%;  ">
-                    <div class="Image-Slider-Slide-Inner" style="height:250px; position:relative;">
+                  <div class="Image-Slider-Slide">
+                    <div style="width:100%;  ">
+                      <div class="Image-Slider-Slide-Inner"
+                        style="height:250px; position:relative;">
 
-                      <h3 style="padding: 4px 0px 30px 0px;  font-weight: 500;letter-spacing: 2px;color:#0f7fac; ">Build
-                        long-term value. </h3>
-                      <p
-                        style=" font-size:14px; font-weight: 500;text-align: justify;color: rgba(0, 0, 0,0.5); line-height: 1.6; letter-spacing: 1px;">
-                        d.</p>
+                        <h3>Build long-term value. </h3>
+                        <p>
+                          d.</p>
+                      </div>
                     </div>
                   </div>
-                </div>
-                <div class="navigation">
-                  <div class="text-slides-button"> </div>
-                  <div class="text-slides-button"> </div>
-                  <div class="text-slides-button"> </div>
+                  <div class="navigation">
+                    <div class="text-slides-button"> </div>
+                    <div class="text-slides-button"> </div>
+                    <div class="text-slides-button"> </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="our-service ">
-      <div class="content-wrapper" style="padding-top:50px;">
-        <div stlye="display:flex; justify-content:center;align-items:center; width:100%;">
-          <span
-            style="display:flex; justify-content:center;align-items:center; width:100%; text-align: center; font-size:45px;line-height:  1.4em; font-weight: 600;color:#494949; padding-bottom:10px;">
-            <p>当社のサービス</p>
-          </span>
-        </div>
-        <div class="border-decoration" style="justify-content: center;display:flex; align-items: center;">
-          <span class style="width:50%;height:1px;background-color: rgba(0, 0, 0, 0.5);max-width:500px;"></span>
-        </div>
-        <div style="justify-content: center;text-align: center; padding-top:25px;">
-          当社は、お客様にさまざまなソフトウェア、設計、情報技術サービスを提供しています。
-        </div>
-        <div style="padding-top: 50px;"></div>
-        <div>
+      <div class="Our-Advantages">
 
-        </div>
-        <div class="our-service-offer">
-          <div class="our-service-offer-container">
-            <div class="our-service-offer-container-products">
-              <div class="our-service-offer-container-products-icon">
-                <img src="../assets/img/logo-search-grid-1x.png">
-              </div>
-              <div class="our-service-offer-container-products-title" style>
-                <p>ウェブアプリケーション</p>
-              </div>
-              <div class="our-service-offer-container-products-description" style>
-                <p>最新のWebテクノロジーに基づいて構築されたレスポンシブWebアプリケーションを提供することにより、
-                  クライアントは任意のデバイスのブラウザーを介して顧客に独自のサービスを拡張できます。</p>
-              </div>
-            </div>
-          </div>
-          <div class="our-service-offer-container">
-            <div class="our-service-offer-container-products">
-              <div class="our-service-offer-container-products-icon">
-                <img src="../assets/img/logo-search-grid-1x.png">
-              </div>
-              <div class="our-service-offer-container-products-title" style>
-                <p>ビジネスソフトウェア</p>
-              </div>
-              <div class="our-service-offer-container-products-description" style>
-                <p>標準的なビジネスプロセス用またはお客様固有のコンピュータソフトウェア。私たちは、お客様のビジネスプロセスを改善、サポート、
-                  自動化するための新しい方法をお客様に提供することを目指しています。</p>
-              </div>
-            </div>
-          </div>
-          <div class="our-service-offer-container">
-            <div class="our-service-offer-container-products">
-              <div class="our-service-offer-container-products-icon">
-                <img src="../assets/img/logo-search-grid-1x.png">
-              </div>
-              <div class="our-service-offer-container-products-title" style>
-                <p>情報技術コンサル</p>
-              </div>
-              <div class="our-service-offer-container-products-description" style>
-                <p>当社は、お客様の問題やニーズを明確にし、ソリューションを提供および評価し、
-                  選択したソリューションの実装ロードマップを提案することを目指しています。</p>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </div>
-    <div style="height: 800px;   " class="Featured-Software">
-      <div class="content-wrapper" style="padding-top:100px;">
-        <div style="background-color: #ffffff;height: 100%;width: full;">
-
+        <div class="content-wrapper">
+          <!-- <div style="position:absolute; top:0px;left:-100px; ">
+          <img src="../assets/img/dot-long.png" style="opacity:15%;  ;" />
+        </div> -->
+          <!-- <div style=" ">
+            <img src="../assets/img/dot-long.png" style="opacity:15%;  ;" />
+          </div> -->
           <!-- <div
-              style="background-color:rgb(126, 126, 126); width: 100%; height: 200px;">
+            style=" justify-content: center;align-items: center;text-align: center; ">
+            <p style=" font-size: 65px;font-weight:bolder;color:  #0f7fac;">
+              We Offer
+            </p>
+          </div> -->
+          <div
+            style="   padding:75px 0px 50px 0px; display: flex;align-items: center;justify-content: center; ">
+            <div class="We-Offer">
 
-            </div> -->
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-    <div style="height: 300px; background-color: white;"></div>
 
-    <!-- <div class="">
+      <div class="Our-Service ">
+        <div class="content-wrapper">
+          <div style="padding-top:150px;">
 
+          </div>
+
+          <div
+            stlye="display:flex; justify-content:center;align-items:center; width:100%;">
+            <span
+              style="display:flex; justify-content:center;align-items:center; width:100%; text-align: center; font-size:45px;line-height:  1.4em; font-weight: 600;color:#494949; padding-bottom:10px;">
+              <p>当社のサービス</p>
+            </span>
+          </div>
+          <div class="border-decoration"
+            style="justify-content: center;display:flex; align-items: center;">
+            <span class
+              style="width:50%;height:1px;background-color: rgba(0, 0, 0, 0.5);max-width:500px;"></span>
+          </div>
+          <div
+            style="justify-content: center;text-align: center; padding-top:25px;">
+            当社は、お客様にさまざまなソフトウェア、設計、情報技術サービスを提供しています。
+          </div>
+          <div style="padding-top: 50px;"></div>
+          <div>
+
+          </div>
+          <div class="our-service-offer">
+            <div class="our-service-offer-container">
+              <div class="our-service-offer-container-products">
+                <div class="our-service-offer-container-products-icon">
+                  <img src="../assets/img/logo-search-grid-1x.png">
+                </div>
+                <div class="our-service-offer-container-products-title" style>
+                  <p>ウェブアプリケーション</p>
+                </div>
+                <div class="our-service-offer-container-products-description"
+                  style>
+                  <p>最新のWebテクノロジーに基づいて構築されたレスポンシブWebアプリケーションを提供することにより、
+                    クライアントは任意のデバイスのブラウザーを介して顧客に独自のサービスを拡張できます。</p>
+                </div>
+              </div>
+            </div>
+            <div class="our-service-offer-container">
+              <div class="our-service-offer-container-products">
+                <div class="our-service-offer-container-products-icon">
+                  <img src="../assets/img/logo-search-grid-1x.png">
+                </div>
+                <div class="our-service-offer-container-products-title" style>
+                  <p>ビジネスソフトウェア</p>
+                </div>
+                <div class="our-service-offer-container-products-description"
+                  style>
+                  <p>標準的なビジネスプロセス用またはお客様固有のコンピュータソフトウェア。私たちは、お客様のビジネスプロセスを改善、サポート、
+                    自動化するための新しい方法をお客様に提供することを目指しています。</p>
+                </div>
+              </div>
+            </div>
+            <div class="our-service-offer-container">
+              <div class="our-service-offer-container-products">
+                <div class="our-service-offer-container-products-icon">
+                  <img src="../assets/img/logo-search-grid-1x.png">
+                </div>
+                <div class="our-service-offer-container-products-title" style>
+                  <p>情報技術コンサル</p>
+                </div>
+                <div class="our-service-offer-container-products-description"
+                  style>
+                  <p>当社は、お客様の問題やニーズを明確にし、ソリューションを提供および評価し、
+                    選択したソリューションの実装ロードマップを提案することを目指しています。</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <!-- <div class="Featured-Software">
+        <div class="content-wrapper" style="padding-top:100px;">
+          <div style="background-color: #F8F8F7;height: 100%;width: full;">
+
+     
+          </div>
+        </div>
       </div> -->
+      <div style="height: 300px; background-color: rgb(248,248,239) ;"></div>
 
-  </main>
-  <footer>
+    </main>
+    <footer>
 
-  </footer>
-</body>
+    </footer>
+  </body>
 
 </html>
 <script type="text/javascript">
-
-var coll = document.getElementsByClassName("collapsible");
-var i;
-
-for (i = 0; i < coll.length; i++) {
-  coll[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var content = this.nextElementSibling;
-    if (content.style.maxHeight){
-      content.style.maxHeight = "null";
-    } else {
-      content.style.maxHeight = content.scrollHeight + "px";
+   var show = Boolean;
+function collapseAbout(){
+   
+    // show= !show;
+    show = !show 
+    //collapseContainer
+    var container = document.querySelector(".About-Us-Description"); 
+    if(show){
+      container.classList.add('Show-Collapse'); 
+      document.querySelector(".About-Us-Description-text").classList.add('collapseTriggerActive')
+      document.querySelector(".collapseIcon").classList.add('collapseTriggerIcon')
+      
+      // document.querySelector
+    }else{
+      container.classList.remove('Show-Collapse');
+      document.querySelector(".collapseTrigger").classList.remove('collapseTriggerActive')
+      document.querySelector(".collapseIcon").classList.remove('collapseTriggerIcon')
     }
-  });
+    console.log(show);
+   
 }
+ 
 
 
   var counter = 1;
@@ -413,22 +489,23 @@ for (i = 0; i < coll.length; i++) {
     showSlides(slideIndex += n);
   }
 
-  function decreaseSlide() {
-    clearTimeout(ImgaeSliderTimeOut)
-    slideIndex--;
-    showSlides(slideIndex)
-    setTimeout(function () {
-      plusSlides(1)
-    }, 5000);
-  }
-  function increaseSlide() {
-    clearTimeout(ImgaeSliderTimeOut)
-    slideIndex++;
-    showSlides(slideIndex);
-    setTimeout(function () {
-      plusSlides(1)
-    }, 5000);
-  }
+
+  // function decreaseSlide() {
+  //   clearTimeout(ImgaeSliderTimeOut)
+  //   slideIndex--;
+  //   showSlides(slideIndex)
+  //   setTimeout(function () {
+  //     plusSlides(1)
+  //   }, 5000);
+  // }
+  // function increaseSlide() {
+  //   clearTimeout(ImgaeSliderTimeOut)
+  //   slideIndex++;
+  //   showSlides(slideIndex);
+  //   setTimeout(function () {
+  //     plusSlides(1)
+  //   }, 5000);
+  // }
   // Thumbnail image controls
   function currentSlide(n) {
     showSlides(slideIndex = n);
@@ -452,6 +529,8 @@ for (i = 0; i < coll.length; i++) {
             console.log(i)
             slides[i].classList.add('Image-Slider-Slide-Active');
             buttons[i].classList.add('Image-Slider-Slide-Active');
+
+            
           } else {
             slides[i].classList.remove('Image-Slider-Slide-Active');
             buttons[i].classList.remove('Image-Slider-Slide-Active');
@@ -467,12 +546,11 @@ for (i = 0; i < coll.length; i++) {
     }
   }
 
-  var ImgaeSliderTimeOut = setTimeout(function () {
+
+  
+  setInterval(function () {
     plusSlides(1)
-  }, 5000);
-  // setInterval(function () {
-  //   plusSlides(1)
-  // }, 2000);
+  }, 8000);
 
 
 
