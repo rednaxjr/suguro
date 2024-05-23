@@ -9,6 +9,13 @@
     <script src="../index.js" type="text/javascript" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
       rel="stylesheet">
@@ -24,9 +31,8 @@
         </div>
         <div class="logo_banner">
           <span>
-            <p style="font-size: 20px;font-weight: 700;">Logo Name</p>
-            <p style="font-size: 14px; color:#0f7fac;font-weight: 400;">Logo
-              Motto</p>
+            <p style="font-size: 26px;font-weight: 700;">Suguro Technology</p>
+
           </span>
         </div>
       </div>
@@ -43,7 +49,12 @@
               class="nav-link  nav-link-button "
               style>雇用機会</a></li>
           <li class="nav-item   "><a class="nav-link  inactive">ログイン</a></li>
-          <li class="nav-item inactive"><a class="nav-link  ">search</a></li>
+          <!-- <li class="nav-item inactive"> 
+            
+            <svg data-slot="icon" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"></path>
+            </svg>
+             </li> -->
         </ul>
 
       </nav>
@@ -118,10 +129,16 @@
       </div>
 
       <div class="About-Us"
-        style="padding: 50px 0px 50px 0px;background-color: #F8F8F7; ">
+        style="padding: 50px 0px 50px 0px;background-color: #F8F8F7;  overflow:hidden;">
         <div class="content-wrapper">
+          <div style="position:absolute; top: 0;left: 0px; ">
+            <img src="../assets/img/About us.png"
+              style="opacity: 20%; height:500px;width: 500px;" />
+          </div>
           <div style=" display: flex; padding-bottom:50px">
-            <div style="width:100%;   padding:0px 25px 15px 0px;">
+            <div
+              style="width:100%;   padding:0px 25px 15px 0px;position:relative;">
+
               <div style="width:100%;   height:auto;  "
                 class="collapseContainer">
                 <div
@@ -149,7 +166,8 @@
                 <div class="About-Us-Description">
                   <span
                     class="About-Us-Description-text">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    <p style="color:#312d2d ">Lorem ipsum dolor sit amet
+                      consectetur adipisicing elit.
                       Tenetur accusamus doloribus alias ducimus esse eaque quod
                       error
                       deleniti sit facilis assumenda, qui molestias? Voluptas
@@ -167,7 +185,6 @@
                 </div>
               </div>
             </div>
-
             <div class="About-Us-Slider"
               style="width:50%; position: relative; ">
               <div style="position:absolute; top:-20px;left:-150px;">
@@ -267,45 +284,42 @@
           </div>
         </div>
       </div>
-      <div class="Our-Advantages">
+      <div class="Visit-Us"
+        style="  height:700px ;      background-color: #F8F8F7; overflow:hidden;">
 
-        <div class="content-wrapper">
-          <!-- <div style="position:absolute; top:0px;left:-100px; ">
-          <img src="../assets/img/dot-long.png" style="opacity:15%;  ;" />
-        </div> -->
-          <!-- <div style=" ">
+        <div class="content-wrapper" style="padding:25px 0px 25px 0px;">
+          <div style="position:absolute; top:25px;left:-100px; ">
             <img src="../assets/img/dot-long.png" style="opacity:15%;  ;" />
-          </div> -->
-          <!-- <div
-            style=" justify-content: center;align-items: center;text-align: center; ">
-            <p style=" font-size: 65px;font-weight:bolder;color:  #0f7fac;">
-              We Offer
-            </p>
-          </div> -->
-          <div
-            style="   padding:75px 0px 50px 0px; display: flex;align-items: center;justify-content: center; ">
-            <div class="We-Offer">
-              <div style="height: 100%;width:150px;border:1px solid black;"></div>
-              <div style="height: 100%;width:150px;border:1px solid black;"></div>
-              <div style="height: 100%;width:150px;border:1px solid black;"></div>
-              <div style="height: 100%;width:150px;border:1px solid black;"></div>
-              <div style="height: 100%;width:150px;border:1px solid black;"></div>
-
-            </div>
           </div>
+          <div style="position:absolute; top:25px;left:-100px; ">
+            <img src="../assets/img/dot-long.png" style="opacity:15%;  ;" />
+          </div>
+          <div style="position:absolute; top:-20px;left:-150px;">
+            <img src="../assets/img/circle.png" style="opacity: 15%; " />
+          </div>
+          <!-- <div style="position:absolute; ">
+            <img src="../assets/img/circle.png" height="250"
+              style="opacity: 15%; " />
+          </div> -->
+
+          <div
+            style=" justify-content: center;align-items: center;text-align: center;padding-bottom:25px;  ">
+            <p
+              style=" font-size: 65px;font-weight:bolder;color:  #0f7fac;letter-spacing: 5px;">
+              Visit Us
+            </p>
+          </div>
+          <div id="map"></div>
         </div>
       </div>
 
       <div class="Our-Service ">
         <div class="content-wrapper">
-          <div style="padding-top:100px;">
-
-          </div>
-
+          <div style="padding-top:25px;"> </div>
           <div
             stlye="display:flex; justify-content:center;align-items:center; width:100%;">
             <span
-              style="display:flex; justify-content:center;align-items:center; width:100%; text-align: center; font-size:45px;line-height:  1.4em; font-weight: 600;color:#494949; padding-bottom:10px;">
+              style="display:flex; justify-content:center;align-items:center; width:100%; text-align: center; font-size:45px;line-height:  1.4em; font-weight: 600;color:#0f7fac; padding-bottom:10px;">
               <p>当社のサービス</p>
             </span>
           </div>
@@ -315,24 +329,32 @@
               style="width:50%;height:1px;background-color: rgba(0, 0, 0, 0.5);max-width:500px;"></span>
           </div>
           <div
-            style="justify-content: center;text-align: center; padding-top:25px;">
+            style="justify-content: center;text-align: center; padding-top:25px; ">
             当社は、お客様にさまざまなソフトウェア、設計、情報技術サービスを提供しています。
           </div>
           <div style="padding-top: 50px;"></div>
           <div>
-
           </div>
           <div class="our-service-offer">
             <div class="our-service-offer-container">
               <div class="our-service-offer-container-products">
                 <div class="our-service-offer-container-products-icon">
-                  <img src="../assets/img/logo-search-grid-1x.png">
+                  <svg xmlns="http://www.w3.org/2000/svg"
+                    class="icon icon-tabler icon-tabler-browser" width="60"
+                    height="60" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="#4d4a4a" fill="none" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path
+                      d="M4 4m0 1a1 1 0 0 1 1 -1h14a1 1 0 0 1 1 1v14a1 1 0 0 1 -1 1h-14a1 1 0 0 1 -1 -1z" />
+                    <path d="M4 8l16 0" />
+                    <path d="M8 4l0 4" />
+                  </svg>
                 </div>
                 <div class="our-service-offer-container-products-title" style>
                   <p>ウェブアプリケーション</p>
                 </div>
-                <div class="our-service-offer-container-products-description"
-                  style>
+                <div class="our-service-offer-container-products-description">
                   <p>最新のWebテクノロジーに基づいて構築されたレスポンシブWebアプリケーションを提供することにより、
                     クライアントは任意のデバイスのブラウザーを介して顧客に独自のサービスを拡張できます。</p>
                 </div>
@@ -341,7 +363,19 @@
             <div class="our-service-offer-container">
               <div class="our-service-offer-container-products">
                 <div class="our-service-offer-container-products-icon">
-                  <img src="../assets/img/logo-search-grid-1x.png">
+                  <svg xmlns="http://www.w3.org/2000/svg"
+                    class="icon icon-tabler icon-tabler-device-imac" width="60"
+                    height="60" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="#4d4a4a" fill="none" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path
+                      d="M3 4a1 1 0 0 1 1 -1h16a1 1 0 0 1 1 1v12a1 1 0 0 1 -1 1h-16a1 1 0 0 1 -1 -1v-12z" />
+                    <path d="M3 13h18" />
+                    <path d="M8 21h8" />
+                    <path d="M10 17l-.5 4" />
+                    <path d="M14 17l.5 4" />
+                  </svg>
                 </div>
                 <div class="our-service-offer-container-products-title" style>
                   <p>ビジネスソフトウェア</p>
@@ -356,7 +390,18 @@
             <div class="our-service-offer-container">
               <div class="our-service-offer-container-products">
                 <div class="our-service-offer-container-products-icon">
-                  <img src="../assets/img/logo-search-grid-1x.png">
+                  <svg xmlns="http://www.w3.org/2000/svg"
+                    class="icon icon-tabler icon-tabler-bulb" width="60"
+                    height="60" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="#4d4a4a" fill="none" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path
+                      d="M3 12h1m8 -9v1m8 8h1m-15.4 -6.4l.7 .7m12.1 -.7l-.7 .7" />
+                    <path
+                      d="M9 16a5 5 0 1 1 6 0a3.5 3.5 0 0 0 -1 3a2 2 0 0 1 -4 0a3.5 3.5 0 0 0 -1 -3" />
+                    <path d="M9.7 17l4.6 0" />
+                  </svg>
                 </div>
                 <div class="our-service-offer-container-products-title" style>
                   <p>情報技術コンサル</p>
@@ -372,146 +417,198 @@
           </div>
         </div>
       </div>
-      <!-- <div class="Featured-Software">
-        <div class="content-wrapper" style="padding-top:100px;">
-          <div style="background-color: #F8F8F7;height: 100%;width: full;">
 
-     
+      <div style="height: 700px; background-color: #fff;">
+        <div class="content-wrapper" style="padding-top:150px;">
+          <div style="padding-top:25px;"> </div>
+          <div
+            stlye="display:flex; justify-content:center;align-items:center; width:100%;">
+            <span
+              style="display:flex; justify-content:center;align-items:center; width:100%; text-align: center; font-size:45px;line-height:  1.4em; font-weight: 600;color:#0f7fac; padding-bottom:10px;">
+              <p>注目のソフトウェア</p>
+            </span>
           </div>
+          <div class="border-decoration"
+            style="justify-content: center;display:flex; align-items: center;">
+            <span class
+              style="width:50%;height:1px;background-color: rgba(0, 0, 0, 0.5);max-width:500px;"></span>
+          </div>
+
         </div>
-      </div> -->
-      <div style="height: 500px; background-color: rgb(248,248,239) ;"></div>
-
+      </div>
+      <div class="pg-footer">
+        <footer class="footer">
+          <svg class="footer-wave-svg" xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 1200 100" preserveAspectRatio="none">
+            <path class="footer-wave-path"
+              d="M851.8,100c125,0,288.3-45,348.2-64V0H0v44c3.7-1,7.3-1.9,11-2.9C80.7,22,151.7,10.8,223.5,6.3C276.7,2.9,330,4,383,9.8 c52.2,5.7,103.3,16.2,153.4,32.8C623.9,71.3,726.8,100,851.8,100z"></path>
+          </svg>
+          <div class="footer-content">
+            <div class="footer-content-column" style>
+              <div class="footer-logo"
+                style="border:1px solid black;height:200px; display: flex;align-items: center;width:100%;justify-content: center; ">
+      
+                <h1>LOGO</h1>
+              </div>
+      
+            </div>
+            <div class="footer-content-column">
+              <div class="footer-menu">
+                <h2 class="footer-menu-name"> Company</h2>
+                <ul id="menu-company" class="footer-menu-list">
+                  <li class="menu-item"
+                    style="display: flex;font-size: 14px;font-weight: 700;">
+                    <p>
+                      <span style>Profile</span>
+                    </p>
+                  </li>
+                  <li class="menu-item"
+                    style="display: flex;font-size: 14px;font-weight: 700;">
+                    <p>
+                      <span style>About Us </span>
+                    </p>
+                  </li>
+      
+                </ul>
+              </div>
+            </div>
+            <div class="footer-content-column">
+              <div class="footer-menu">
+                <h2 class="footer-menu-name"> Contact us</h2>
+                <ul id="menu-quick-links" class="footer-menu-list">
+                  <li class="menu-item"
+                    style="display: flex;font-size: 14px;font-weight: 700;">
+                    <p>
+                      <span style>Telephone: </span>
+                      <span>0283-86-7016</span>
+                    </p>
+                  </li>
+                  <li class="menu-item"
+                    style="display: flex;font-size: 14px;font-weight: 700;">
+                    <p>
+                      <span style>Fax: </span>
+                      <span>0283-86-7017</span>
+                    </p>
+                  </li>
+      
+                </ul>
+              </div>
+            </div>
+            <div class="footer-content-column">
+              <div class="footer-menu">
+                <h2 class="footer-menu-name"> Connect on us</h2>
+                <ul id="menu-quick-links" class="footer-menu-list">
+                  <li class="menu-item"
+                    style="display: flex;font-size: 14px;font-weight: 700;">
+                    <p>
+      
+                      <svg
+                        style="border:2px solid white;height:100%; border-radius: 25%;"
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="icon icon-tabler icon-tabler-brand-facebook-filled"
+                        width="28" height="28" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="#0f7fac" fill="white" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path
+                          d="M18 2a1 1 0 0 1 .993 .883l.007 .117v4a1 1 0 0 1 -.883 .993l-.117 .007h-3v1h3a1 1 0 0 1 .991 1.131l-.02 .112l-1 4a1 1 0 0 1 -.858 .75l-.113 .007h-2v6a1 1 0 0 1 -.883 .993l-.117 .007h-4a1 1 0 0 1 -.993 -.883l-.007 -.117v-6h-2a1 1 0 0 1 -.993 -.883l-.007 -.117v-4a1 1 0 0 1 .883 -.993l.117 -.007h2v-1a6 6 0 0 1 5.775 -5.996l.225 -.004h3z"
+                          stroke-width="0" fill="currentColor" />
+                      </svg>
+                      <svg
+                        style="border:2px solid white;height:100%; border-radius: 25%;"
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="icon icon-tabler icon-tabler-brand-twitter-filled"
+                        width="28" height="28" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="#0f7fac" fill="none" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path
+                          d="M14.058 3.41c-1.807 .767 -2.995 2.453 -3.056 4.38l-.002 .182l-.243 -.023c-2.392 -.269 -4.498 -1.512 -5.944 -3.531a1 1 0 0 0 -1.685 .092l-.097 .186l-.049 .099c-.719 1.485 -1.19 3.29 -1.017 5.203l.03 .273c.283 2.263 1.5 4.215 3.779 5.679l.173 .107l-.081 .043c-1.315 .663 -2.518 .952 -3.827 .9c-1.056 -.04 -1.446 1.372 -.518 1.878c3.598 1.961 7.461 2.566 10.792 1.6c4.06 -1.18 7.152 -4.223 8.335 -8.433l.127 -.495c.238 -.993 .372 -2.006 .401 -3.024l.003 -.332l.393 -.779l.44 -.862l.214 -.434l.118 -.247c.265 -.565 .456 -1.033 .574 -1.43l.014 -.056l.008 -.018c.22 -.593 -.166 -1.358 -.941 -1.358l-.122 .007a.997 .997 0 0 0 -.231 .057l-.086 .038a7.46 7.46 0 0 1 -.88 .36l-.356 .115l-.271 .08l-.772 .214c-1.336 -1.118 -3.144 -1.254 -5.012 -.554l-.211 .084z"
+                          stroke-width="0" fill="currentColor" />
+                      </svg>
+                      <svg xmlns="http://www.w3.org/2000/svg"
+                        class="icon icon-tabler icon-tabler-brand-instagram"
+                        width="28" height="28" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="#0f7fac" fill="none" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path
+                          d="M4 4m0 4a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z" />
+                        <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+                        <path d="M16.5 7.5l0 .01" />
+                      </svg>
+                    </p>
+                  </li>
+      
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="footer-copyright-wrapper">
+              <p class="footer-copyright-text">
+                <a class="footer-copyright-link" href="#" target="_self"> © 2024
+                  Suguru Tech. All Rights Reserved. </a>
+              </p>
+            </div>
+          </div>
+        </footer>
+      </div>
     </main>
-    <footer>
 
-    </footer>
   </body>
 
 </html>
+<script src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap"
+  async defer></script>
 <script type="text/javascript">
+
+// function myMap() {
+// var mapProp= {
+//   center:new google.maps.LatLng(51.508742,-0.120850),
+//   zoom:5,
+// };
+// var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+// }
+// myMap()
+
+  
+var map = L.map('map').setView([36.3151072, 139.5919262], 25);
+L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+}).addTo(map);
+var marker = L.marker([36.3151072, 139.5919262]).addTo(map);
+marker.bindPopup("<b>Hello world!</b><br>Here we are.").openPopup();
    var show = Boolean;
-function collapseAbout(){
-   
-    // show= !show;
-    show = !show 
-    //collapseContainer
+function collapseAbout(){ 
+    show = !show  
     var container = document.querySelector(".About-Us-Description"); 
     if(show){
       container.classList.add('Show-Collapse'); 
       document.querySelector(".About-Us-Description-text").classList.add('collapseTriggerActive')
-      document.querySelector(".collapseIcon").classList.add('collapseTriggerIcon')
-      
-      // document.querySelector
+      document.querySelector(".collapseIcon").classList.add('collapseTriggerIcon') 
     }else{
       container.classList.remove('Show-Collapse');
       document.querySelector(".collapseTrigger").classList.remove('collapseTriggerActive')
       document.querySelector(".collapseIcon").classList.remove('collapseTriggerIcon')
     }
-    console.log(show);
-   
-}
- 
-
-
+    console.log(show); 
+} 
   var counter = 1;
   var slides = document.querySelectorAll('.Image-Slider-Slide');
   var buttons = document.querySelectorAll('.text-slides-button');
-  var slideLength = slides.length;
-
+  var slideLength = slides.length; 
   var currentSlide = 1;
-  var currentSlideDisplay = 0;
-
-  // document.getElementById("currentSlide").innerHTML = currentSlideDisplay;
-  document.getElementById("slideLength").innerHTML = slideLength;
-
-  // let manualNav = function(manual){ 
-  //   slides.forEach((slide)=>{
-  //     slide.classList.remove('Image-Slider-Slide-Active')
-  //   });
-  //   buttons.forEach((btn)=>{
-  //     btn.classList.remove('Image-Slider-Slide-Active');
-  //   });
-  // slides[manual].classList.add('Image-Slider-Slide-Active')
-  // buttons[manual].classList.add('Image-Slider-Slide-Active')
-  // }
-  // buttons.forEach((btn, i )=>{
-  //   btn.addEventListener("click", ()=>{
-  //     manualNav(i);
-  //     currentSlide = i; 
-  //   })
-  // });
-
-
-  // var repeat =function(activeClass){ 
-
-  //   let active=document.getElementsByClassName('Image-Slider-Slide-Active')
-  //   let i =1; 
-  //   slideIndex = 1;
-  //   let j =1 ;
-  //   let temp = 0;
-  //    document.getElementById("currentSlide").innerHTML = j; 
-
-  //   var repeater = () =>{  
-  //     setTimeout(function(){
-  //       [...active].forEach((activeClass)=>{
-  //         activeClass.classList.remove('Image-Slider-Slide-Active')
-  //       });
-
-  //       slides[slideIndex].classList.add('Image-Slider-Slide-Active');
-  //       buttons[slideIndex].classList.add('Image-Slider-Slide-Active');
-  //       slideIndex++;  
-  //       // slideIndex =i; 
-  //       if( slideIndex < slides.length ){ 
-  //           j=slideIndex;
-  //            document.getElementById("currentSlide").innerHTML = j; 
-  //       }else if(slides.length == slideIndex){
-  //         slideIndex = 0;   
-  //         j = slides.length; 
-  //         document.getElementById("currentSlide").innerHTML = j; 
-  //       } 
-  //       if(slideIndex >= slides.length){  
-  //         return;
-  //       } 
-  //       repeater();
-  //       console.log(slideIndex)
-  //     },5000);
-
-  //   }
-  //   repeater();
-  // }
-
-  // repeat();
-
-
+  var currentSlideDisplay = 0; 
+  document.getElementById("slideLength").innerHTML = slideLength; 
   let slideIndex = 1;
 
-  showSlides(slideIndex);
-
-  // Next/previous controls
-  function plusSlides(n) {
-    // clearTimeout(ImgaeSliderTimeOut)
+  showSlides(slideIndex); 
+  function plusSlides(n) { 
     showSlides(slideIndex += n);
   }
-
-
-  // function decreaseSlide() {
-  //   clearTimeout(ImgaeSliderTimeOut)
-  //   slideIndex--;
-  //   showSlides(slideIndex)
-  //   setTimeout(function () {
-  //     plusSlides(1)
-  //   }, 5000);
-  // }
-  // function increaseSlide() {
-  //   clearTimeout(ImgaeSliderTimeOut)
-  //   slideIndex++;
-  //   showSlides(slideIndex);
-  //   setTimeout(function () {
-  //     plusSlides(1)
-  //   }, 5000);
-  // }
-  // Thumbnail image controls
+ 
   function currentSlide(n) {
     showSlides(slideIndex = n);
   }
@@ -539,14 +636,9 @@ function collapseAbout(){
           } else {
             slides[i].classList.remove('Image-Slider-Slide-Active');
             buttons[i].classList.remove('Image-Slider-Slide-Active');
-          }
-          // slides[i].style.display = "none";
+          } 
 
-
-        };
-        // slides[slideIndex - 1].style.display = "block";
-        // slides[slideIndex -1].classList.remove('Image-Slider-Slide-Active');
-        // buttons[slideIndex - 1].classList.remove('Image-Slider-Slide-Active');
+        }; 
       }
     }
   }
