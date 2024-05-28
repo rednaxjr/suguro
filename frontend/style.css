@@ -759,21 +759,17 @@
      border-top-left-radius: 20px;
      height: 100px;
      width: 100%;
-     transition: .5s ease;
-
+     transition: .5s ease; 
      h2 {
          color: #222222;
          text-align: center;
          font-weight: 700;
          line-height: 1.3;
-     }
-
+     } 
      .highlight {
          color: #095a7a;
-     }
-
- }
-
+     } 
+ } 
  .jobs_roles_1_overlay_wrapper {
      position: absolute;
      left: -3px;
