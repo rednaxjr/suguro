@@ -1,24 +1,270 @@
 <!DOCTYPE html>
 <html>
-    <head>
 
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <link href="../style.css" rel="stylesheet" type="text/css" />
-        <script src="../index.js" type="text/javascript" defer></script>
-        <title>Suguro</title>
-        <script src="../components/Navbar/Navbar.js" type="text/javascript" defer></script>
-        <script src="../components/Nooter/Footer.js" type="text/javascript" defer></script>
-        
-      </head>
-    <body   >
-        <header-component></header-component>
-        <main>
-          <!-- Your page's content -->
-        </main>
-        <!-- <footer-component></footer-component> -->
-    </body>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="../style.css" rel="stylesheet" type="text/css" />
+    <script src="../index.js" type="text/javascript" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet">
+
+    <title>Suguro</title>
+  </head>
+
+  <body>
+    <header style="display: flex;justify-content: space-between;">
+      <div class="logo_container" style=" width:auto ;display: flex;">
+        <div class="logo"
+          style="height:40px; width: 40px;border:1px solid black;">
+          <div class></div>
+        </div>
+        <div class="logo_banner">
+          <span>
+            <p style="font-size: 20px;font-weight: 700;">Suguro Tech.</p>
+            <p style="font-size: 14px; color:#095a7a;font-weight: 400;">Work
+              less, produce more</p>
+          </span>
+        </div>
+      </div>
+      <nav>
+        <ul style="display: flex; ">
+          <li class="nav-item "><a class="nav-link  active">
+              <p>ホーム</p>
+            </a></li>
+          <li class="nav-item "><a class="nav-link  inactive">会社概要</a></li>
+          <li class="nav-item "><a class="nav-link  inactive">問い合わせ</a></li>
+
+          <li class="nav-item "
+            style="border-right: 1px solid rgb(71, 71, 71);"><a
+              class="nav-link  nav-link-button "
+              style>雇用機会</a></li>
+          <li class="nav-item   "><a class="nav-link  inactive">ログイン</a></li>
+          <!-- <li class="nav-item inactive"> 
+            
+            <svg data-slot="icon" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"></path>
+            </svg>
+             </li> -->
+        </ul>
+
+      </nav>
+    </header>
+    <main>
+      <div class="About-Us-Image"
+        style=" background-color: #F8F8F7;  overflow:hidden;height:100%; background-image: url('../assets/img/AboutUsBldg2.png');background-repeat: no-repeat;background-size: cover;">
+        <!-- <img src="../assets/img/AboutUsBldg.png"
+        style="height:100%; width:100%; " /> -->
+        <div class="content-wrapper"
+          style="height:100%; ">
+          <div
+            style="position:absolute;top:70px;left: -50px; ">
+            <div style="display: flex;flex-direction: column;">
+              <img src="../assets/img/dot-small-orange.png"
+                style="width:200px;  " />
+            </div>
+          </div>
+
+          <div
+            style="position:absolute;bottom:100px;right: 50px; ">
+            <div style="display: flex;flex-direction: column;">
+              <img src="../assets/img/Thinking face-bro.png"
+                style="width:500px;  opacity:95%" />
+            </div>
+          </div>
+          <!-- <div
+            style="position:absolute;bottom:100px;right: -100px; ">
+            <div style="display: flex;flex-direction: column;">
+              <img src="../assets/img/dot-small.png"
+                style="width:250px;transform: rotate(180deg);opacity:50%;" />
+            </div>
+          </div> -->
+          <div style="position:relative">
+            <div style="position:absolute;top:270px; left:50px;">
+              <p style="font-size:48px; font-weight: 700; letter-spacing: 2px;">
+                <span style="color:#f68c54;">About</span>
+                <span style="color:#ffffff;">Us.</span>
+
+              </p>
+              <p
+                style="font-size:24px; font-weight: 500; letter-spacing: 2px; margin-top:25px;line-height: 1.5;">
+                <span style="color:#ffffff;">We aim to serve our valued clients
+                  with the
+                  <br>
+                  greatest pre-trained employee to help and develop <br>
+                  their businesses in today's
+                </span>
+                <span style="color:#f68c54">
+                  global technology.
+                </span>
+                <!-- <span style="color:#ffffff;"> </span> -->
+
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="About-Us-Component"
+        style=" background-color: #ffff;  overflow:hidden;height:1000px">
+        <div class="content-wrapper">
+
+          <div style="display: flex;justify-content: space-between;margin-top:25px;">
+            <div style="width:100%;border:1px solid black; height:600px;">
+
+            </div>
+            <div style="width:40%;border:1px solid black; height:600px;">
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pg-footer">
+        <footer class="footer">
+          <svg class="footer-wave-svg" xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 1200 100" preserveAspectRatio="none">
+            <path class="footer-wave-path"
+              d="M851.8,100c125,0,288.3-45,348.2-64V0H0v44c3.7-1,7.3-1.9,11-2.9C80.7,22,151.7,10.8,223.5,6.3C276.7,2.9,330,4,383,9.8 c52.2,5.7,103.3,16.2,153.4,32.8C623.9,71.3,726.8,100,851.8,100z"></path>
+          </svg>
+          <div class="footer-content">
+            <div class="footer-content-column" style>
+              <div class="footer-logo"
+                style="border:1px solid black;height:200px; display: flex;align-items: center;width:100%;justify-content: center; ">
+
+                <h1>LOGO</h1>
+              </div>
+
+            </div>
+            <div class="footer-content-column">
+              <div class="footer-menu">
+                <h2 class="footer-menu-name"> Company</h2>
+                <ul id="menu-company" class="footer-menu-list">
+                  <li class="menu-item"
+                    style="display: flex;font-size: 14px;font-weight: 700;">
+                    <p>
+                      <span style>Profile</span>
+                    </p>
+                  </li>
+                  <li class="menu-item"
+                    style="display: flex;font-size: 14px;font-weight: 700;">
+                    <p>
+                      <span style>About Us </span>
+                    </p>
+                  </li>
+
+                </ul>
+              </div>
+            </div>
+            <div class="footer-content-column">
+              <div class="footer-menu">
+                <h2 class="footer-menu-name"> Contact us</h2>
+                <ul id="menu-quick-links" class="footer-menu-list">
+                  <li class="menu-item"
+                    style="display: flex;font-size: 14px;font-weight: 700;">
+                    <p>
+                      <span style>Telephone: </span>
+                      <span>0283-86-7016</span>
+                    </p>
+                  </li>
+                  <li class="menu-item"
+                    style="display: flex;font-size: 14px;font-weight: 700;">
+                    <p>
+                      <span style>Fax: </span>
+                      <span>0283-86-7017</span>
+                    </p>
+                  </li>
+
+                </ul>
+              </div>
+            </div>
+            <div class="footer-content-column">
+              <div class="footer-menu">
+                <h2 class="footer-menu-name"> Connect on us</h2>
+                <ul id="menu-quick-links" class="footer-menu-list">
+                  <li class="menu-item"
+                    style="display: flex;font-size: 14px;font-weight: 700;">
+                    <p>
+
+                      <svg
+                        style="border:2px solid white;height:100%; border-radius: 25%;"
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="icon icon-tabler icon-tabler-brand-facebook-filled"
+                        width="28" height="28" viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="#095a7a" fill="white" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path
+                          d="M18 2a1 1 0 0 1 .993 .883l.007 .117v4a1 1 0 0 1 -.883 .993l-.117 .007h-3v1h3a1 1 0 0 1 .991 1.131l-.02 .112l-1 4a1 1 0 0 1 -.858 .75l-.113 .007h-2v6a1 1 0 0 1 -.883 .993l-.117 .007h-4a1 1 0 0 1 -.993 -.883l-.007 -.117v-6h-2a1 1 0 0 1 -.993 -.883l-.007 -.117v-4a1 1 0 0 1 .883 -.993l.117 -.007h2v-1a6 6 0 0 1 5.775 -5.996l.225 -.004h3z"
+                          stroke-width="0" fill="currentColor" />
+                      </svg>
+                      <svg
+                        style="border:2px solid white;height:100%; border-radius: 25%;"
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="icon icon-tabler icon-tabler-brand-twitter-filled"
+                        width="28" height="28" viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="#095a7a" fill="none" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path
+                          d="M14.058 3.41c-1.807 .767 -2.995 2.453 -3.056 4.38l-.002 .182l-.243 -.023c-2.392 -.269 -4.498 -1.512 -5.944 -3.531a1 1 0 0 0 -1.685 .092l-.097 .186l-.049 .099c-.719 1.485 -1.19 3.29 -1.017 5.203l.03 .273c.283 2.263 1.5 4.215 3.779 5.679l.173 .107l-.081 .043c-1.315 .663 -2.518 .952 -3.827 .9c-1.056 -.04 -1.446 1.372 -.518 1.878c3.598 1.961 7.461 2.566 10.792 1.6c4.06 -1.18 7.152 -4.223 8.335 -8.433l.127 -.495c.238 -.993 .372 -2.006 .401 -3.024l.003 -.332l.393 -.779l.44 -.862l.214 -.434l.118 -.247c.265 -.565 .456 -1.033 .574 -1.43l.014 -.056l.008 -.018c.22 -.593 -.166 -1.358 -.941 -1.358l-.122 .007a.997 .997 0 0 0 -.231 .057l-.086 .038a7.46 7.46 0 0 1 -.88 .36l-.356 .115l-.271 .08l-.772 .214c-1.336 -1.118 -3.144 -1.254 -5.012 -.554l-.211 .084z"
+                          stroke-width="0" fill="currentColor" />
+                      </svg>
+                      <svg xmlns="http://www.w3.org/2000/svg"
+                        class="icon icon-tabler icon-tabler-brand-instagram"
+                        width="28" height="28" viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="#095a7a" fill="none" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path
+                          d="M4 4m0 4a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z" />
+                        <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+                        <path d="M16.5 7.5l0 .01" />
+                      </svg>
+                    </p>
+                  </li>
+
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="footer-copyright-wrapper">
+              <p class="footer-copyright-text">
+                <a class="footer-copyright-link" href="#" target="_self"> © 2024
+                  Suguru Tech. All Rights Reserved. </a>
+              </p>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </main>
+
+  </body>
+
 </html>
-<script> 
+<script type="text/javascript">
+
+ 
+
+
+
+
 </script>

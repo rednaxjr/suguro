@@ -92,6 +92,51 @@
      margin-left: 12px;
  }
 
+ header nav .dropdown button {
+     cursor: pointer;
+     padding: 10px 25px 10px;
+     border: none;
+     text-decoration: none;
+     background: none;
+     border-radius: 10px;
+     font-weight: 700;
+     font-size: 14px;
+     height: 100%;
+     width: 100%;
+     align-items: center;
+
+ }
+
+ header nav .dropdown button:hover {
+
+     color: #f1f1f1;
+     background-color: #095a7a;
+
+ }
+
+ header nav .dropdown .dropdown-menu {
+     position: absolute;
+     left: 0;
+     top: calc(100% + 15px);
+     background-color: #ffffff;
+     padding: 25px 10px 25px;
+     /* border-bottom-left-radius: 10px; 
+   border-bottom-right-radius: 10px;  */
+     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .1);
+     opacity: 0;
+     pointer-events: none;
+     pointer-events: none;
+     transform: translateY(-10px);
+     transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+ }
+
+ .dropdown.activeDropdown > .nav-link+ .dropdown-menu {
+     opacity: 1;
+     transform: translateY(0);
+     pointer-events: auto;
+ }
+
+
  header nav ul li .nav-link.inactive:hover {
      border-radius: 10px;
      color: #f1f1f1;
@@ -131,7 +176,7 @@
  .inquiry-button {
      cursor: pointer;
      font-size: 40px;
-     background-color: #EC9929;
+     background-color: #ee6e29;
      color: #ffffff;
      padding: 15px 35px 15px 35px;
      border: none;
@@ -140,15 +185,71 @@
  }
 
  .inquiry-button:hover {
-     background-color: #f7a63c;
+     background-color: #ec7f44;
      justify-content: space-evenly;
  }
 
- @media screen and (max-width: 800px) {
+ @media screen and (max-width: 640px) {
+     .our-service-offer {
+         display: flex;
+         flex-direction: column;
+     }
+
+ }
+
+ @media only screen and (min-width: 640px) and (max-width: 768px) {
      div.Company-Advantages {
          display: none;
      }
+
+     .content-wrapper {
+         max-width: 80%;
+         min-width: 700px;
+     }
  }
+
+ @media only screen and (min-width: 768px) and (max-width:1024px) {
+     .our-service-offer {
+         display: flex;
+         flex-direction: column;
+     }
+
+     .content-wrapper {
+         max-width: 900px;
+         min-width: 700px;
+     }
+ }
+
+ /* @media screen and (max-width: ) {
+    
+ } */
+
+ @media only screen and (min-width: 1024px) and (max-width: 1536px) {
+     .our-service-offer {
+         display: flex;
+         flex-direction: column;
+     }
+
+     .content-wrapper {
+         max-width: 900px;
+         min-width: 700px;
+     }
+ }
+
+ @media screen and (max-width: 1536px) {
+     .our-service-offer {
+         display: flex;
+         flex-direction: column;
+     }
+
+     .content-wrapper {
+         max-width: 900px;
+         min-width: 700px;
+     }
+ }
+
+
+
 
  .About-Us {
      background-color: white;
@@ -314,17 +415,12 @@
      height: 300px;
  }
 
- @media screen and (max-width: 600px) {
-     .our-service-offer {
-         display: flex;
-         flex-direction: column;
-     }
- }
+
 
  .About-Us-Description {
      width: 100%;
      transition: all 500ms ease-in-out;
-     display: flex;
+
      height: 0px;
      overflow: hidden;
      padding: 10px 25px 0px 0px;
@@ -338,7 +434,7 @@
  }
 
  .Show-Collapse {
-     height: 300px;
+     height: 450px;
      transition: all 500ms ease-in-out;
      /* clip-path: circle(150% at 0 50%); */
  }
@@ -366,7 +462,8 @@
  }
 
  .pg-footer {
-     font-family: 'Roboto', sans-serif;
+     /* font-family: 'Roboto', sans-serif; */
+
  }
 
 
@@ -759,17 +856,20 @@
      border-top-left-radius: 20px;
      height: 100px;
      width: 100%;
-     transition: .5s ease; 
+     transition: .5s ease;
+
      h2 {
          color: #222222;
          text-align: center;
          font-weight: 700;
          line-height: 1.3;
-     } 
+     }
+
      .highlight {
          color: #095a7a;
-     } 
- } 
+     }
+ }
+
  .jobs_roles_1_overlay_wrapper {
      position: absolute;
      left: -3px;
@@ -809,78 +909,78 @@
 
  /*Job and Roles 2*/
  .jobs_roles_2_container {
-    height: 370px;
-    width: 100%;
-    position: relative;
-    border: 2px solid #DCDCDC;
-    border-top-right-radius: 25px;
-    border-top-left-radius: 25px;
-    background-color: #fff;
-}
+     height: 370px;
+     width: 100%;
+     position: relative;
+     border: 2px solid #DCDCDC;
+     border-top-right-radius: 25px;
+     border-top-left-radius: 25px;
+     background-color: #fff;
+ }
 
-.jobs_roles_2{
-    display: block;
-    width: 100%;
-    height: auto;
-    border-top-right-radius: 20px;
-    border-top-left-radius: 20px;
+ .jobs_roles_2 {
+     display: block;
+     width: 100%;
+     height: auto;
+     border-top-right-radius: 20px;
+     border-top-left-radius: 20px;
 
-}
+ }
 
-.jobs_roles_2_overlay {
+ .jobs_roles_2_overlay {
 
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #095a7a;
-    overflow: hidden;
-    height: 0;
-    width: 100%;
-    transition: .5s ease all;
+     position: absolute;
+     left: 0;
+     right: 0;
+     bottom: 0;
+     background-color: #095a7a;
+     overflow: hidden;
+     height: 0;
+     width: 100%;
+     transition: .5s ease all;
 
-    ul {
-        padding: 25px;
-        color: #fff;
+     ul {
+         padding: 25px;
+         color: #fff;
 
-        li {
-            font-size: 14px;
-        }
-    }
+         li {
+             font-size: 14px;
+         }
+     }
 
 
-}
+ }
 
-.jobs_roles_2_overlay_text {
-    padding-top: 15px;
+ .jobs_roles_2_overlay_text {
+     padding-top: 15px;
 
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0px;
-    background-color: #ffffff;
-    /* border-radius: 250px/150px;      */
-    border-top-right-radius: 20px;
-    border-top-left-radius: 20px;
-    height: 100px;
-    width: 100%;
-    transition: .5s ease;
+     position: absolute;
+     left: 0;
+     right: 0;
+     bottom: 0px;
+     background-color: #ffffff;
+     /* border-radius: 250px/150px;      */
+     border-top-right-radius: 20px;
+     border-top-left-radius: 20px;
+     height: 100px;
+     width: 100%;
+     transition: .5s ease;
 
-    h2 {
-        color: #222222;
-        text-align: center;
-        font-weight: 700;
-        line-height: 1.3;
-    }
+     h2 {
+         color: #222222;
+         text-align: center;
+         font-weight: 700;
+         line-height: 1.3;
+     }
 
-    .highlight {
-        color: #095a7a;
-    }
+     .highlight {
+         color: #095a7a;
+     }
 
-}
+ }
 
-.jobs_roles_2_overlay_wrapper {
-    position: absolute;
+ .jobs_roles_2_overlay_wrapper {
+     position: absolute;
      left: -3px;
      right: 0;
      bottom: -3px;
@@ -889,107 +989,107 @@
      height: 10px;
      width: 102%;
      transition: .5s ease;
-}
+ }
 
-.jobs_roles_2_container:hover .jobs_roles_2_overlay {
-    height: 75%;
-}
+ .jobs_roles_2_container:hover .jobs_roles_2_overlay {
+     height: 75%;
+ }
 
-.jobs_roles_2_container:hover {
-    .jobs_roles_2_overlay_text {
-        /* border-top-right-radius: 25px;
+ .jobs_roles_2_container:hover {
+     .jobs_roles_2_overlay_text {
+         /* border-top-right-radius: 25px;
     border-top-left-radius: 25px; */
-        height: 100%;
-        background-color: #095a7a;
+         height: 100%;
+         background-color: #095a7a;
 
-        h2 {
-            color: #ffffff !important;
-        }
+         h2 {
+             color: #ffffff !important;
+         }
 
-        .highlight {
-            color: #ffffff !important;
-        }
-    }
+         .highlight {
+             color: #ffffff !important;
+         }
+     }
 
-    .jobs_roles_2_overlay_wrapper {
-        height: 0px;
-    }
-}
+     .jobs_roles_2_overlay_wrapper {
+         height: 0px;
+     }
+ }
 
-/*Job and Roles 3*/
-.jobs_roles_3_container {
-    height: 370px;
-    width: 100%;
-    position: relative;
-    border: 2px solid #DCDCDC;
-    border-top-right-radius: 25px;
-    border-top-left-radius: 25px;
-    background-color: #fff;
-}
+ /*Job and Roles 3*/
+ .jobs_roles_3_container {
+     height: 370px;
+     width: 100%;
+     position: relative;
+     border: 2px solid #DCDCDC;
+     border-top-right-radius: 25px;
+     border-top-left-radius: 25px;
+     background-color: #fff;
+ }
 
-.jobs_roles_3{
-    display: block;
-    width: 100%;
-    height: auto;
-    border-top-right-radius: 20px;
-    border-top-left-radius: 20px;
+ .jobs_roles_3 {
+     display: block;
+     width: 100%;
+     height: auto;
+     border-top-right-radius: 20px;
+     border-top-left-radius: 20px;
 
-}
+ }
 
-.jobs_roles_3_overlay {
+ .jobs_roles_3_overlay {
 
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #095a7a;
-    overflow: hidden;
-    height: 0;
-    width: 100%;
-    transition: .5s ease all;
+     position: absolute;
+     left: 0;
+     right: 0;
+     bottom: 0;
+     background-color: #095a7a;
+     overflow: hidden;
+     height: 0;
+     width: 100%;
+     transition: .5s ease all;
 
-    ul {
-        padding: 25px;
-        color: #fff;
+     ul {
+         padding: 25px;
+         color: #fff;
 
-        li {
-            font-size: 14px;
-        }
-    }
+         li {
+             font-size: 14px;
+         }
+     }
 
 
-}
+ }
 
-.jobs_roles_3_overlay_text {
-    padding-top: 15px;
+ .jobs_roles_3_overlay_text {
+     padding-top: 15px;
 
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0px;
-    background-color: #ffffff;
-    /* border-radius: 250px/150px;      */
-    border-top-right-radius: 20px;
-    border-top-left-radius: 20px;
-    height: 100px;
-    width: 100%;
-    transition: .5s ease;
+     position: absolute;
+     left: 0;
+     right: 0;
+     bottom: 0px;
+     background-color: #ffffff;
+     /* border-radius: 250px/150px;      */
+     border-top-right-radius: 20px;
+     border-top-left-radius: 20px;
+     height: 100px;
+     width: 100%;
+     transition: .5s ease;
 
-    h2 {
-        color: #222222;
-        text-align: center;
-        font-weight: 700;
-        line-height: 1.3;
-    }
+     h2 {
+         color: #222222;
+         text-align: center;
+         font-weight: 700;
+         line-height: 1.3;
+     }
 
-    .highlight {
-        color: #095a7a;
-    }
+     .highlight {
+         color: #095a7a;
+     }
 
-}
+ }
 
-.jobs_roles_3_overlay_wrapper {
-    position: absolute;
+ .jobs_roles_3_overlay_wrapper {
+     position: absolute;
      left: -3px;
      right: 0;
      bottom: -3px;
@@ -998,107 +1098,107 @@
      height: 10px;
      width: 102%;
      transition: .5s ease;
-}
+ }
 
-.jobs_roles_3_container:hover .jobs_roles_3_overlay {
-    height: 75%;
-}
+ .jobs_roles_3_container:hover .jobs_roles_3_overlay {
+     height: 75%;
+ }
 
-.jobs_roles_3_container:hover {
-    .jobs_roles_3_overlay_text {
-        /* border-top-right-radius: 25px;
+ .jobs_roles_3_container:hover {
+     .jobs_roles_3_overlay_text {
+         /* border-top-right-radius: 25px;
     border-top-left-radius: 25px; */
-        height: 100%;
-        background-color: #095a7a;
+         height: 100%;
+         background-color: #095a7a;
 
-        h2 {
-            color: #ffffff !important;
-        }
+         h2 {
+             color: #ffffff !important;
+         }
 
-        .highlight {
-            color: #ffffff !important;
-        }
-    }
+         .highlight {
+             color: #ffffff !important;
+         }
+     }
 
-    .jobs_roles_3_overlay_wrapper {
-        height: 0px;
-    }
-}
+     .jobs_roles_3_overlay_wrapper {
+         height: 0px;
+     }
+ }
 
-/*Job and Roles 4*/
-.jobs_roles_4_container {
-    height: 370px;
-    width: 100%;
-    position: relative;
-    border: 2px solid #DCDCDC;
-    border-top-right-radius: 25px;
-    border-top-left-radius: 25px;
-    background-color: #fff;
-}
+ /*Job and Roles 4*/
+ .jobs_roles_4_container {
+     height: 370px;
+     width: 100%;
+     position: relative;
+     border: 2px solid #DCDCDC;
+     border-top-right-radius: 25px;
+     border-top-left-radius: 25px;
+     background-color: #fff;
+ }
 
-.jobs_roles_4{
-    display: block;
-    width: 100%;
-    height: auto;
-    border-top-right-radius: 20px;
-    border-top-left-radius: 20px;
+ .jobs_roles_4 {
+     display: block;
+     width: 100%;
+     height: auto;
+     border-top-right-radius: 20px;
+     border-top-left-radius: 20px;
 
-}
+ }
 
-.jobs_roles_4_overlay {
+ .jobs_roles_4_overlay {
 
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #095a7a;
-    overflow: hidden;
-    height: 0;
-    width: 100%;
-    transition: .5s ease all;
+     position: absolute;
+     left: 0;
+     right: 0;
+     bottom: 0;
+     background-color: #095a7a;
+     overflow: hidden;
+     height: 0;
+     width: 100%;
+     transition: .5s ease all;
 
-    ul {
-        padding: 25px;
-        color: #fff;
+     ul {
+         padding: 25px;
+         color: #fff;
 
-        li {
-            font-size: 14px;
-        }
-    }
+         li {
+             font-size: 14px;
+         }
+     }
 
 
-}
+ }
 
-.jobs_roles_4_overlay_text {
-    padding-top: 15px;
+ .jobs_roles_4_overlay_text {
+     padding-top: 15px;
 
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0px;
-    background-color: #ffffff;
-    /* border-radius: 250px/150px;      */
-    border-top-right-radius: 20px;
-    border-top-left-radius: 20px;
-    height: 100px;
-    width: 100%;
-    transition: .5s ease;
+     position: absolute;
+     left: 0;
+     right: 0;
+     bottom: 0px;
+     background-color: #ffffff;
+     /* border-radius: 250px/150px;      */
+     border-top-right-radius: 20px;
+     border-top-left-radius: 20px;
+     height: 100px;
+     width: 100%;
+     transition: .5s ease;
 
-    h2 {
-        color: #222222;
-        text-align: center;
-        font-weight: 700;
-        line-height: 1.3;
-    }
+     h2 {
+         color: #222222;
+         text-align: center;
+         font-weight: 700;
+         line-height: 1.3;
+     }
 
-    .highlight {
-        color: #095a7a;
-    }
+     .highlight {
+         color: #095a7a;
+     }
 
-}
+ }
 
-.jobs_roles_4_overlay_wrapper {
-    position: absolute;
+ .jobs_roles_4_overlay_wrapper {
+     position: absolute;
      left: -3px;
      right: 0;
      bottom: -3px;
@@ -1107,29 +1207,29 @@
      height: 10px;
      width: 102%;
      transition: .5s ease;
-}
+ }
 
-.jobs_roles_4_container:hover .jobs_roles_4_overlay {
-    height: 75%;
-}
+ .jobs_roles_4_container:hover .jobs_roles_4_overlay {
+     height: 75%;
+ }
 
-.jobs_roles_4_container:hover {
-    .jobs_roles_4_overlay_text {
-        /* border-top-right-radius: 25px;
+ .jobs_roles_4_container:hover {
+     .jobs_roles_4_overlay_text {
+         /* border-top-right-radius: 25px;
     border-top-left-radius: 25px; */
-        height: 100%;
-        background-color: #095a7a;
+         height: 100%;
+         background-color: #095a7a;
 
-        h2 {
-            color: #ffffff !important;
-        }
+         h2 {
+             color: #ffffff !important;
+         }
 
-        .highlight {
-            color: #ffffff !important;
-        }
-    }
+         .highlight {
+             color: #ffffff !important;
+         }
+     }
 
-    .jobs_roles_4_overlay_wrapper {
-        height: 0px;
-    }
-}
+     .jobs_roles_4_overlay_wrapper {
+         height: 0px;
+     }
+ }
