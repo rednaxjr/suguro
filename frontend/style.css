@@ -60,11 +60,65 @@
      filter: drop-shadow(0 4px 3px rgb(0 0 0 / 0.07)) drop-shadow(0 2px 2px rgb(0 0 0 / 0.06));
  }
 
+ header nav .dropdown .dropdown-menu {
+     position: absolute;
+     left: -200px;
+     top: calc(100% + 18px);
+     background-color: #ffffff;
+     padding: 25px 10px 25px;
+     height:auto;
+     /* border-bottom-left-radius: 10px; 
+  border-bottom-right-radius: 10px;  */
+     box-shadow: 0 5px 5px 0 rgba(0, 0, 0, .1);
+     opacity: 0;
+     pointer-events: none;
+     pointer-events: none;
+     transform: translateY(-10px);
+     transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+
+     ul li {
+        padding: 10px 10px 10px;
+        border-bottom: 1px solid gray;
+        width: 100%;
+        cursor: pointer;
+        /* letter-spacing: 1px; */
+    }
+    
+     ul li a {
+    
+        margin: 0px; display: block; width: 100%; height: 100%;
+        font-size: 12px;
+        color: #222222;
+        text-decoration: none;
+    }
+    
+    ul li:hover a{
+    
+        color: #095a7a;
+    }
+    img.image-hover{
+        height:0;
+        width:0;
+       
+        transition: .7s ease-in-out; 
+    }
+    img.active{
+        height:100%;
+        width:100%;
+        transition: .7s ease-in-out;
+        opacity: 100%;
+        
+    }
+
+ }
+ 
+
+
  header nav ul {
      list-style: none;
  }
 
- header nav ul li {
+ header nav ul li.nav-item {
      cursor: pointer;
 
      position: relative;
@@ -74,7 +128,7 @@
 
  }
 
- header nav ul li a {
+ header nav ul li.nav-item a {
 
      padding: 10px 25px 10px;
      display: block;
@@ -114,23 +168,9 @@
 
  }
 
- header nav .dropdown .dropdown-menu {
-     position: absolute;
-     left: 0;
-     top: calc(100% + 15px);
-     background-color: #ffffff;
-     padding: 25px 10px 25px;
-     /* border-bottom-left-radius: 10px; 
-   border-bottom-right-radius: 10px;  */
-     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .1);
-     opacity: 0;
-     pointer-events: none;
-     pointer-events: none;
-     transform: translateY(-10px);
-     transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
- }
 
- .dropdown.activeDropdown > .nav-link+ .dropdown-menu {
+
+ .dropdown.activeDropdown>.nav-link+.dropdown-menu {
      opacity: 1;
      transform: translateY(0);
      pointer-events: auto;
@@ -143,6 +183,17 @@
      background-color: #095a7a;
 
  }
+ header nav ul li .nav-link.inactive:visited {
+  
+     color: #000; 
+     text-decoration:none;
+
+ }
+ header nav ul li a:visited:hover {
+    
+    text-decoration:none;
+
+}
 
 
  header nav ul li a.active p {

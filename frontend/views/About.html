@@ -27,7 +27,8 @@
   </head>
 
   <body>
-    <header style="display: flex;justify-content: space-between;">
+    <header
+      style="display: flex;justify-content: space-between; position:relative;z-index: 1;">
       <div class="logo_container" style=" width:auto ;display: flex;">
         <div class="logo"
           style="height:40px; width: 40px;border:1px solid black;">
@@ -42,26 +43,86 @@
         </div>
       </div>
       <nav>
-        <ul style="display: flex; ">
-          <li class="nav-item "><a class="nav-link  active">
+        <ul style="display: flex; align-items: center;justify-content: center;">
+          <li class="nav-item ">
+            <a href="./index.html" class="nav-link  inactive">
               <p>ホーム</p>
-            </a></li>
-          <li class="nav-item "><a class="nav-link  inactive">会社概要</a></li>
-          <li class="nav-item "><a class="nav-link  inactive">問い合わせ</a></li>
+            </a>
+          </li>
+          <li class="nav-item "><a  href="./index.html" class="nav-link  inactive">問い合わせ</a></li>
+          <div class="dropdown" style="position:relative" data-dropdown>
+            <button class="nav-link inactive" data-dropdown-button>
+              会社
+            </button>
+            <div class="dropdown-menu">
+              <div
+                style="width: 350px;position: relative;display:flex;justify-content: space-between;height: 100%;">
+                <div style="width: 100%;  ">
+                  <ul class="dropdown-menu-items">
+                    <li onmouseover="changeImage(this);"
+                      onmouseleave="changeImageDefault();" id="comp_about"
+                      class="menu-item-link">
+                      <a href="About.html">
+                        About Us
+                      </a>
+                    </li>
+                    <li onmouseover="changeImage(this);"
+                      onmouseleave="changeImageDefault();" id="comp_profile"
+                      class="menu-item-link">
+                      <a href="About.html">
+                        Profile
+                      </a>
+                    </li>
+                    <li>
+                      <a href="About.html">
+                        Lorem
+                      </a>
+                    </li>
+                    <li>
+                      <a href="About.html">
+                        Lorem
+                      </a>
+                    </li>
+                    <li>
+                      <a href="About.html">
+                        Lorem
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div
+                  style="width: 100%;  height:100% ; justify-content: center;display: flex; padding:20px;   ">
+                  <div
+                    style=" width:100%; height:150px;   align-items: center;justify-content: center;display:flex; padding:5px 5px 5px 5px; ">
 
+                    <img src="../assets/img/img_placeholder.png"
+                      class="image-hover image-hover-default" />
+                    <img src="../assets/img/Thinking face-bro.png"
+                      class="image-hover image-hover-comp_about" />
+                    <img src="../assets/img/Profile data-amico.png"
+                      style=" " class=" image-hover image-hover-comp_profile" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <li class="nav-item ">
+            <a class="nav-link  inactive">
+              問い合わせ
+            </a>
+          </li>
           <li class="nav-item "
-            style="border-right: 1px solid rgb(71, 71, 71);"><a
-              class="nav-link  nav-link-button "
-              style>雇用機会</a></li>
-          <li class="nav-item   "><a class="nav-link  inactive">ログイン</a></li>
-          <!-- <li class="nav-item inactive"> 
-            
-            <svg data-slot="icon" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"></path>
-            </svg>
-             </li> -->
+            style="border-right: 1px solid rgb(71, 71, 71);">
+            <a class="nav-link  nav-link-button ">
+              雇用機会
+            </a>
+          </li>
+          <li class="nav-item   ">
+            <a class="nav-link  inactive">
+              ログイン
+            </a>
+          </li>
         </ul>
-
       </nav>
     </header>
     <main>
@@ -123,7 +184,8 @@
         style=" background-color: #ffff;  overflow:hidden;height:1000px">
         <div class="content-wrapper">
 
-          <div style="display: flex;justify-content: space-between;margin-top:25px;">
+          <div
+            style="display: flex;justify-content: space-between;margin-top:25px;">
             <div style="width:100%;border:1px solid black; height:600px;">
 
             </div>
@@ -261,10 +323,71 @@
 
 </html>
 <script type="text/javascript">
-
  
 
+ 
+ 
+ function contactUsButton(n){
+   // const element = document.getElementsByClassName("Contact-Us");
+   // element.scrollIntoView(0); 
 
+ var $container = $("html,body");
+ var $scrollTo = $('.Contact-Us');
+
+ $container.animate({scrollTop: $scrollTo.offset().top - $container.offset().top + $container.scrollTop(), scrollLeft: 0},0); }
+ 
+ setInterval(function () {
+   plusSlides(1)
+ }, 8000);  
+
+ document.addEventListener("click", e=> {
+   
+   const isDropdownButton = e.target.matches("[data-dropdown-button]");
+
+   if (!isDropdownButton && e.target.closest('[data-dropdown]') != null) return
+
+   // e.target.closest("[data-dropdown]") != null)  return
+ 
+   let currentDropdown;
+   if(isDropdownButton){
+     // console.log("its is")
+     currentDropdown  = e.target.closest('[data-dropdown]')
+     currentDropdown.classList.toggle('activeDropdown')
+   }
+   document.querySelectorAll("[data-dropdown].activeDropdown").forEach(dropdown=>{
+     if(dropdown ===currentDropdown) return
+     dropdown.classList.remove('activeDropdown')
+   })
+
+ })
+
+ let allImageHover =   document.querySelectorAll(".image-hover");
+ allImageHover[0].classList.add('active'); 
+
+ function changeImageDefault(e){
+   let allImageHover =   document.querySelectorAll(".image-hover");
+   let active=document.getElementsByClassName('image-hover');
+    [...active].forEach((activeClass)=>{
+         activeClass.classList.remove('active')
+       });
+       allImageHover[0].classList.add('active');
+
+ }
+ function  changeImage(e){
+ 
+       let allImageHover =   document.querySelectorAll(".image-hover");
+       // allImageHover[0].classList.remove('active'); 
+       let myTarget =  "image-hover-"+e.id; 
+       for(let i =0;i<allImageHover.length;i++){ 
+         if(allImageHover[i].classList.contains(myTarget)){
+           allImageHover[i].classList.add('active'); 
+         }else{
+           allImageHover[i].classList.remove('active'); 
+         }
+       } 
+ }
+
+  
 
 
 </script>
