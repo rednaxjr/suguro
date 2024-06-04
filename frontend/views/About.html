@@ -34,16 +34,11 @@
       style="display: flex;justify-content: space-between; position:relative;z-index: 1;">
       <div class="logo_container" style=" width:auto ;display: flex;">
         <div class="logo"
-          style="height:40px; width: 40px;border:1px solid black;">
-          <div class></div>
+          style="height:100%; width: 100%; ">
+          <img src="../assets/img/suguro3.png"
+            style="height: 100%;width: 100%;">
         </div>
-        <div class="logo_banner">
-          <span>
-            <p style="font-size: 20px;font-weight: 700;">Suguro Tech.</p>
-            <p style="font-size: 14px; color:#095a7a;font-weight: 400;">Work
-              less, produce more</p>
-          </span>
-        </div>
+
       </div>
       <nav>
         <ul style="display: flex; align-items: center;justify-content: center;">
@@ -91,7 +86,7 @@
                     <li onmouseover="changeImage(this);"
                       onmouseleave="changeImageDefault();" id="comp_about"
                       class="menu-item-link">
-                      <a href="About.html" style="">
+                      <a href="About.html" style>
                         About Us
                       </a>
                     </li>
@@ -452,7 +447,9 @@
   
   
    const isDropdownButton = e.target.matches("[data-dropdown-button]");
-
+   if(!isDropdownButton){
+      dropIcon[0].classList.remove('show');
+    }
    if (!isDropdownButton && e.target.closest('[data-dropdown]') != null) {
   
     return
