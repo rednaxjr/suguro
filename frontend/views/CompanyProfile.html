@@ -34,16 +34,11 @@
       style="display: flex;justify-content: space-between; position:relative;z-index: 1;">
       <div class="logo_container" style=" width:auto ;display: flex;">
         <div class="logo"
-          style="height:40px; width: 40px;border:1px solid black;">
-          <div class></div>
+          style="height:100%; width: 100%; ">
+          <img src="../assets/img/suguro3.png"
+            style="height: 100%;width: 100%;">
         </div>
-        <div class="logo_banner">
-          <span>
-            <p style="font-size: 20px;font-weight: 700;">Suguro Tech.</p>
-            <p style="font-size: 14px; color:#095a7a;font-weight: 400;">Work
-              less, produce more</p>
-          </span>
-        </div>
+
       </div>
       <nav>
         <ul style="display: flex; align-items: center;justify-content: center;">
@@ -54,9 +49,35 @@
           </li>
 
           <div class="dropdown" style="position:relative" data-dropdown>
+
             <button class="nav-link active" data-dropdown-button>
-              <p>会社</p>
+              <div
+                style=" position:relative;pointer-events: none;display: flex;">
+                <p>会社</p>
+
+                <div style=" position:relative;pointer-events: none;">
+                  <div style="position:absolute;right:-25px;top:0px;">
+                    <span class="dropdown-menu-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg"
+                        style="transition: all 500ms ease-in-out;
+                      display: flex; "
+                        class="icon icon-tabler icon-tabler-caret-right-filled"
+                        width="20" height="20" viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="#0f7fac" fill="none" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path
+                          d="M9 6c0 -.852 .986 -1.297 1.623 -.783l.084 .076l6 6a1 1 0 0 1 .083 1.32l-.083 .094l-6 6l-.094 .083l-.077 .054l-.096 .054l-.036 .017l-.067 .027l-.108 .032l-.053 .01l-.06 .01l-.057 .004l-.059 .002l-.059 -.002l-.058 -.005l-.06 -.009l-.052 -.01l-.108 -.032l-.067 -.027l-.132 -.07l-.09 -.065l-.081 -.073l-.083 -.094l-.054 -.077l-.054 -.096l-.017 -.036l-.027 -.067l-.032 -.108l-.01 -.053l-.01 -.06l-.004 -.057l-.002 -12.059z"
+                          stroke-width="0" fill="currentColor" />
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+
+              </div>
             </button>
+
             <div class="dropdown-menu">
               <div
                 style="width: 350px;position: relative;display:flex;justify-content: space-between;height: 100%;">
@@ -65,15 +86,15 @@
                     <li onmouseover="changeImage(this);"
                       onmouseleave="changeImageDefault();" id="comp_about"
                       class="menu-item-link">
-                      <a href="About.html">
-                        About Us
+                      <a href="About.html" style>
+                        私たちについて
                       </a>
                     </li>
                     <li onmouseover="changeImage(this);"
                       onmouseleave="changeImageDefault();" id="comp_profile"
                       class="menu-item-link">
-                      <a href="About.html">
-                        Profile
+                      <a href="CompanyProfile.html">
+                        会社概要
                       </a>
                     </li>
                     <li>
@@ -129,7 +150,7 @@
       </nav>
     </header>
     <main>
-      <div class="CompanyProfile-Image"
+      <div class="About-Us-Image"
         style=" background-color: #F8F8F7;  overflow:hidden;height:100%; background-image: url('../assets/img/AboutUsBldg2.png');background-repeat: no-repeat;background-size: cover;">
         <!-- <img src="../assets/img/AboutUsBldg.png"
         style="height:100%; width:100%; " /> -->
@@ -146,37 +167,25 @@
           <div
             style="position:absolute;bottom:100px;right: 50px; ">
             <div style="display: flex;flex-direction: column;">
-              <img src="../assets/img/Thinking face-bro.png"
+              <img src="../assets/img/Profile data-amico.png"
                 style="width:500px;  opacity:95%" />
             </div>
           </div>
-          <!-- <div
-            style="position:absolute;bottom:100px;right: -100px; ">
-            <div style="display: flex;flex-direction: column;">
-              <img src="../assets/img/dot-small.png"
-                style="width:250px;transform: rotate(180deg);opacity:50%;" />
-            </div>
-          </div> -->
           <div style="position:relative">
             <div style="position:absolute;top:270px; left:50px;">
               <p style="font-size:48px; font-weight: 700; letter-spacing: 2px;">
-                <span style="color:#f68c54;">About</span>
-                <span style="color:#ffffff;">Us.</span>
-
+                <span style="color:#f68c54;">会社概要</span>
               </p>
               <p
                 style="font-size:24px; font-weight: 500; letter-spacing: 2px; margin-top:25px;line-height: 1.5;">
-                <span style="color:#ffffff;">We aim to serve our valued clients
-                  with the
-                  <br>
-                  greatest pre-trained employee to help and develop <br>
-                  their businesses in today's
+                <span
+                  style="color:#ffffff;">
+                  私たちは、大切なクライアントに、この現在の世界的な<br>テクノロジーにおけるビジネスを支援し、 
+                  改善するための<br>最高のソフトウェア
+                  アプリケーションと IT サービス<br>を提供することを目指しています。
                 </span>
-                <span style="color:#f68c54">
-                  global technology.
-                </span>
-                <!-- <span style="color:#ffffff;"> </span> -->
-
+               
+                
               </p>
             </div>
           </div>
@@ -185,27 +194,35 @@
       </div>
       <div class="About-Us-Component"
         style=" background-color: #ffff;  overflow:hidden;height:1000px">
-        <div class="content-wrapper"> 
+        <div class="content-wrapper">
+
           <div
             style="display: flex;justify-content: space-between;margin-top:100px;">
-            <div class="menu-links-container"> 
+            <div class="menu-links-container">
+
               <div>
                 <div
-                  style=" height:80px;  border-bottom: 1px dotted #A2A2A2; "> 
+                  style=" height:80px;  border-bottom: 1px dotted #A2A2A2; ">
+
                 </div>
                 <ul>
-                  <li class="inactive"><a>About Us</a></li>
-                  <li class="active"><a>Company Profile</a></li>
+                  <li class="inactive"><a href="About.html" syle="height:100%;width:100%;">私たちについて</a></li>
+                  <li class="active"><a href="CompanyProfile.html" syle="height:100%;width:100%;">会社概要</a></li>
                   <li class="inactive"><a>lorem</a></li>
                   <li class="inactive"><a>lorem</a></li>
-                  <li class="inactive"><a>lorem</a></li> 
+                  <li class="inactive"><a>lorem</a></li>
+
                 </ul>
               </div>
             </div>
-            <div style=" " class="menu-links-content-container"> 
+            <div style=" " class="menu-links-content-container">
+              <!-- <div
+                style=" height:80px; ">
+
+              </div> -->
               <div
                 style="height:80px; font-weight: 900;width:100%; border-top:#f68c54 1px solid; border-bottom:#f68c54 1px solid;color:#F38D46; align-items: center;justify-content: center;display: flex;text-align: center;font-size: 42px; letter-spacing: 2px;">
-                About Us
+                会社概要
               </div>
               <div
                 style="height:100%; font-weight: 500;width:100%;    text-align: justify;font-size: 12px; letter-spacing: 2px;padding-top: 50px;color: #222222;">
@@ -236,7 +253,7 @@
                   consectetur adipisicing elit. Soluta dolor iure excepturi! Cum
                   numquam rem mollitia itaque natus provident iusto repellat
                   quaerat dolor voluptatem, eos suscipit, corporis maxime
-                  nostrum ipsum.<br><br> 
+                  nostrum ipsum.<br><br>
                   &nbsp;Reiciendis vero debitis nam, culpa iusto laudantium
                   consectetur, reprehenderit soluta, fugit beatae perferendis
                   rem ipsum excepturi hic ut deleniti. Voluptatem, numquam
@@ -416,18 +433,22 @@
  var $container = $("html,body");
  var $scrollTo = $('.Contact-Us');
 
- $container.animate({scrollTop: $scrollTo.offset().top - $container.offset().top + $container.scrollTop(), scrollLeft: 0},0); }
+ $container.animate({scrollTop: $scrollTo.offset().top - $container.offset().top + $container.scrollTop(), scrollLeft: 0},0); 
+}
  
- setInterval(function () {
-   plusSlides(1)
- }, 8000);  
+  var dropdown_ = false;
 
- document.addEventListener("click", e=> {
-   
+  document.addEventListener("click", e=> {
+  
+  
    const isDropdownButton = e.target.matches("[data-dropdown-button]");
-
-   if (!isDropdownButton && e.target.closest('[data-dropdown]') != null) return
-
+   if(!isDropdownButton){
+      dropIcon[0].classList.remove('show');
+    }
+   if (!isDropdownButton && e.target.closest('[data-dropdown]') != null) {
+  
+    return
+   } 
    // e.target.closest("[data-dropdown]") != null)  return
  
    let currentDropdown;
@@ -435,10 +456,22 @@
      // console.log("its is")
      currentDropdown  = e.target.closest('[data-dropdown]')
      currentDropdown.classList.toggle('activeDropdown')
+     dropdown_ = !dropdown_;
+     
+     
+    let dropIcon = document.querySelectorAll(".dropdown-menu-icon");
+    
+    if(dropdown_){
+      dropIcon[0].classList.add('show');
+     
+    }else{
+      console.log("close")
+      dropIcon[0].classList.remove('show');
+    }
    }
    document.querySelectorAll("[data-dropdown].activeDropdown").forEach(dropdown=>{
      if(dropdown ===currentDropdown) return
-     dropdown.classList.remove('activeDropdown')
+     dropdown.classList.remove('activeDropdown');
    })
 
  })
