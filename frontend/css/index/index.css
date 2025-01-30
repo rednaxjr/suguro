@@ -340,6 +340,7 @@
      height: auto;
      border-top-right-radius: 20px;
      border-top-left-radius: 20px;
+     max-width:290px;
 
  }
 
@@ -448,6 +449,7 @@
      height: auto;
      border-top-right-radius: 20px;
      border-top-left-radius: 20px;
+     max-width:290px;
 
  }
 
@@ -557,7 +559,7 @@
      height: auto;
      border-top-right-radius: 20px;
      border-top-left-radius: 20px;
-
+     max-width:290px;
  }
 
  .jobs_roles_3_overlay {
@@ -666,7 +668,8 @@
      height: auto;
      border-top-right-radius: 20px;
      border-top-left-radius: 20px;
-
+     max-width:290px;
+     /* min */
  }
 
  .jobs_roles_4_overlay {
@@ -757,3 +760,13 @@
          height: 0px;
      }
  }
+ .dropdown-menu-icon{
+    transition: all 500ms ease-in-out;
+ }
+ .dropdown-menu-icon.show {
+     transition: all 500ms ease-in-out;
+     display: flex;
+     transform: rotate(90deg);
+ }
+
+ 

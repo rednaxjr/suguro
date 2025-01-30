@@ -110,4 +110,13 @@
          min-width: 700px;
      }
  }
- 
+ .Fade-Up{ 
+  position:relative;
+  transform:translateY(150px);
+  opacity: 0;
+  transition: all 1s ease;
+ }
+ .Fade-Up.Fade-Up-Active{
+    transform:translateY(0px);
+    opacity: 1;
+ }

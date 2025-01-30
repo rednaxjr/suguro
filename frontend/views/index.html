@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 
@@ -35,16 +36,17 @@
       style="display: flex;justify-content: space-between; position:relative;z-index: 1;">
       <div class="logo_container" style=" width:auto ;display: flex;">
         <div class="logo"
-          style="height:40px; width: 40px;border:1px solid black;">
-          <div class></div>
+          style="height:100%; width: 100%; ">
+          <img src="../assets/img/suguro3.png"
+            style="height: 100%;width: 100%;">
         </div>
-        <div class="logo_banner">
+        <!-- <div class="logo_banner">
           <span>
             <p style="font-size: 20px;font-weight: 700;">Suguro Tech.</p>
             <p style="font-size: 14px; color:#095a7a;font-weight: 400;">Work
               less, produce more</p>
           </span>
-        </div>
+        </div> -->
       </div>
       <nav>
         <ul style="display: flex; align-items: center;justify-content: center;">
@@ -68,9 +70,35 @@
           </li>
 
           <div class="dropdown" style="position:relative" data-dropdown>
+
             <button class="nav-link inactive" data-dropdown-button>
-              会社
+              <div
+                style=" position:relative;pointer-events: none;display: flex;">
+                <p>会社</p>
+
+                <div style=" position:relative;pointer-events: none;">
+                  <div style="position:absolute;right:-25px;top:0px;">
+                    <span class="dropdown-menu-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg"
+                        style="transition: all 500ms ease-in-out;
+                      display: flex; "
+                        class="icon icon-tabler icon-tabler-caret-right-filled"
+                        width="20" height="20" viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="#222222" fill="none" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path
+                          d="M9 6c0 -.852 .986 -1.297 1.623 -.783l.084 .076l6 6a1 1 0 0 1 .083 1.32l-.083 .094l-6 6l-.094 .083l-.077 .054l-.096 .054l-.036 .017l-.067 .027l-.108 .032l-.053 .01l-.06 .01l-.057 .004l-.059 .002l-.059 -.002l-.058 -.005l-.06 -.009l-.052 -.01l-.108 -.032l-.067 -.027l-.132 -.07l-.09 -.065l-.081 -.073l-.083 -.094l-.054 -.077l-.054 -.096l-.017 -.036l-.027 -.067l-.032 -.108l-.01 -.053l-.01 -.06l-.004 -.057l-.002 -12.059z"
+                          stroke-width="0" fill="currentColor" />
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+
+              </div>
             </button>
+
             <div class="dropdown-menu">
               <div
                 style="width: 350px;position: relative;display:flex;justify-content: space-between;height: 100%;">
@@ -79,15 +107,15 @@
                     <li onmouseover="changeImage(this);"
                       onmouseleave="changeImageDefault();" id="comp_about"
                       class="menu-item-link">
-                      <a href="About.html">
-                        About Us
+                      <a href="About.html" style>
+                        私たちについて
                       </a>
                     </li>
                     <li onmouseover="changeImage(this);"
                       onmouseleave="changeImageDefault();" id="comp_profile"
                       class="menu-item-link">
-                      <a href="About.html">
-                        Profile
+                      <a href="CompanyProfile.html">
+                        会社概要
                       </a>
                     </li>
                     <li>
@@ -105,7 +133,6 @@
                         Lorem
                       </a>
                     </li>
-
                   </ul>
                 </div>
                 <div
@@ -121,10 +148,7 @@
                       style=" " class=" image-hover image-hover-comp_profile" />
                   </div>
                 </div>
-                <!-- <p></p>
-                <p></p> -->
               </div>
-
             </div>
           </div>
           <!-- <li class="nav-item "><a class="nav-link  inactive">会社概要</a></li> -->
@@ -207,8 +231,8 @@
       <div>
       </div>
 
-      <div class="About-Us"
-        style="padding: 50px 0px 50px 0px;background-color: #F8F8F7;  overflow:hidden;">
+      <div class="About-Us Fade-Up"
+        style="padding: 50px 0px 50px 0px;background-color: #F8F8F7;  overflow:hidden;   ">
         <div class="content-wrapper">
           <div style="position:absolute; top: 0;left: 0px; ">
             <img src="../assets/img/About us.png"
@@ -228,8 +252,7 @@
                     onclick="collapseAbout()">
 
                     <h3
-                      style="  font-weight: 500;   letter-spacing: 1px;">About
-                      Us</h3>
+                      style="  font-weight: 500;   letter-spacing: 1px;">私たちについて</h3>
                     <svg xmlns="http://www.w3.org/2000/svg"
                       class="icon icon-tabler icon-tabler-caret-right-filled collapseIcon"
                       width="28" height="25" viewBox="0 0 24 24"
@@ -264,7 +287,7 @@
                   <div class
                     style="display:flex;align-items: center;justify-content: center;margin-top:50px;  ">
                     <a href="./About.html"
-                      style="background-color: #ee6e29;color:#ffffff; padding:15px 50px 15px 50px;border:none;border-radius:25px;cursor:pointer;font-size:18px;">
+                      style="text-decoration: none;background-color: #ee6e29;color:#ffffff; padding:15px 50px 15px 50px;border:none;border-radius:25px;cursor:pointer;font-size:18px;">
 
                       続きを見る
                     </a>
@@ -326,12 +349,9 @@
                       <div class="Image-Slider-Slide-Inner"
                         style="height:250px; position:relative;">
 
-                        <h3>Get
-                          Top Employee </h3>
+                        <h3> 優秀な従業員を獲得する </h3>
                         <p>
-                          Suguro
-                          Tech. gurantee you employed the top employee's
-                          that can make your company grow high.</p>
+                          勝呂テックあなたの会社を大きく成長させることができる優秀な従業員を雇用していることを保証します。</p>
                       </div>
                     </div>
                   </div>
@@ -340,12 +360,12 @@
                       <div class="Image-Slider-Slide-Inner"
                         style="height:250px; position:relative;">
 
-                        <h3> Risk Free </h3>
+                        <h3> ノーリスク </h3>
                         <p>
-                          Suguro
-                          Suguro Technology does not need any deposits or
-                          upfront costs. We keep hiring until you discover the
-                          ideal employee. No contracts that are fixed.</p>
+                          スグロテックでは、保証金や初期費用は一切かかりません。
+                          理想の人材が見つかるまで採用を続けます。
+                          決まった契約はありません。
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -354,9 +374,12 @@
                       <div class="Image-Slider-Slide-Inner"
                         style="height:250px; position:relative;">
 
-                        <h3>Build long-term value. </h3>
+                        <h3>長期的な価値を構築します。</h3>
                         <p>
-                          d.</p>
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Tenetur accusamus doloribus alias ducimus esse
+                          eaque quod error deleniti sit facilis assumenda, qui
+                          molestias?</p>
                       </div>
                     </div>
                   </div>
@@ -371,31 +394,6 @@
           </div>
         </div>
       </div>
-      <!-- <div class="Visit-Us"
-        style="  height:700px ;      background-color: #F8F8F7; overflow:hidden;">
-
-        <div class="content-wrapper" style="padding:25px 0px 25px 0px;">
-          <div style="position:absolute; top:25px;left:-100px; ">
-            
-          </div>
-          <div style="position:absolute; top:25px;left:-100px; ">
-            <img src="../assets/img/dot-long.png" style="opacity:15%;  ;" />
-          </div>
-          <div style="position:absolute; top:-20px;left:-150px;">
-            <img src="../assets/img/circle.png" style="opacity: 15%; " />
-          </div>
-
-          <div
-            style=" justify-content: center;align-items: center;text-align: center;padding-bottom:25px;  ">
-            <p
-              style=" font-size: 65px;font-weight:bolder;color:  #095a7a;letter-spacing: 5px;">
-              Visit Us
-            </p>
-          </div>
-          <div id="map"></div>
-        </div>
-      </div> -->
-
       <div class="Our-Service ">
         <div class="content-wrapper">
           <div style="padding-top:25px;"> </div>
@@ -418,7 +416,7 @@
           <div style="padding-top: 50px;"></div>
           <div>
           </div>
-          <div class="our-service-offer">
+          <div class="our-service-offer Fade-Up">
             <div class="our-service-offer-container">
               <div class="our-service-offer-container-products">
                 <div class="our-service-offer-container-products-icon">
@@ -501,7 +499,7 @@
         </div>
       </div>
 
-      <div style="height: 1000px; background-color: #F2F1EF; ">
+      <div class=" " style="height: 1000px; background-color: #F2F1EF; ">
         <div class="content-wrapper"
           style="padding-top:150px;overflow: hidden;">
 
@@ -542,7 +540,7 @@
           </div>
           <div
             style="   padding:50px 0px 50px 0px;display: flex;align-items: center;justify-content: center; position: inherit;">
-            <div
+            <div class="Fade-Up"
               style="  padding:25px 15px 25px 15px; width: 100%; max-width: 1000px; min-height: 700px;">
               <div
                 style="position:relative; align-items: center; height: 450px;  background-color: #ebebe7; width:100%;  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);     transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;  filter:drop-shadow(0 4px 3px rgb(0 0 0 / 0.07)) drop-shadow(0 2px 2px rgb(0 0 0 / 0.06));border-radius: 25px;">
@@ -585,7 +583,7 @@
         </div>
       </div>
 
-      <div class="Advantages-Of-Workers"
+      <div class="Advantages-Of-Workers  "
         style="height: 100% auto; background-color: #fff; padding-bottom:100px;padding-top:150px;">
         <div class="content-wrapper">
           <div
@@ -619,7 +617,7 @@
           <div style="padding-top:50px; "></div>
           <div
             style="    display: flex; justify-content: space-beetween;position:relative;  ">
-            <div
+            <div class="Fade-Up"
               style=" height:100%;width:100%;padding:25px;">
               <div
                 style=" height:100%;width:100%;box-shadow: 0px -1px 14px -1px rgba(94,94,94,0.6);background-color: #fff;border-radius:15px; padding:25px 0px 25px 0px;">
@@ -728,6 +726,7 @@
             <div
               style=" height:100%;width:100%;padding:25px;">
               <div
+                class="Fade-Up"
                 style=" height:100%;width:100%;box-shadow: 0px -1px 14px -1px rgba(94,94,94,0.6);background-color: #fff;border-radius:5px;  padding:25px 0px 25px 0px;">
                 <div
                   style="display:flex;width:100%;height:70px;  text-align: center;align-items: center;justify-content: center;">
@@ -824,14 +823,14 @@
               </div>
             </div>
           </div>
-          <div class
+          <div class="Fade-Up"
             style="display:flex;align-items: center;justify-content: center; margin-top: 50px;">
             <button class="button inquiry-button"
               onclick="contactUsButton()">問い合わせ >></button>
           </div>
         </div>
       </div>
-      <div class="Jobs-And-Roles"
+      <div class="Jobs-And-Roles  "
         style="height: 1000px; background-color: #fff;  ">
         <div class="content-wrapper">
           <div style="height: 150px; position: relative;">
@@ -870,7 +869,7 @@
                 class="jobs_roles_1_"
                 style="height:auto;width:auto;  padding:25px 15px 25px 15px;position:relative;">
                 <div
-                  class="jobs_roles_1_container">
+                  class="jobs_roles_1_container Fade-Up">
                   <img src="../assets/img/jobs&roles1.png" class="jobs_roles_1">
                   <div class="jobs_roles_1_overlay_text">
                     <h2>
@@ -909,7 +908,7 @@
                 class="jobs_roles_2_"
                 style="height:auto;width:auto;  padding:25px 15px 25px 15px;position:relative;">
                 <div
-                  class="jobs_roles_2_container">
+                  class="jobs_roles_2_container Fade-Up">
                   <img src="../assets/img/jobs&roles2.png" class="jobs_roles_2">
                   <div class="jobs_roles_2_overlay_text">
                     <h2>
@@ -940,7 +939,7 @@
                 class="jobs_roles_3_"
                 style="height:auto;width:auto;  padding:25px 15px 25px 15px;position:relative;">
                 <div
-                  class="jobs_roles_3_container">
+                  class="jobs_roles_3_container Fade-Up">
                   <img src="../assets/img/jobs&roles3.png" class="jobs_roles_3">
                   <div class="jobs_roles_3_overlay_text">
                     <h2>
@@ -971,7 +970,7 @@
                 class="jobs_roles_4_"
                 style="height:auto;width:auto;  padding:25px 15px 25px 15px;position:relative;">
                 <div
-                  class="jobs_roles_4_container">
+                  class="jobs_roles_4_container Fade-Up">
                   <img src="../assets/img/jobs&roles4.png" class="jobs_roles_4">
                   <div class="jobs_roles_4_overlay_text">
                     <h2>
@@ -1031,18 +1030,18 @@
             </div>
 
           </div>
-          <div style="padding-top:50px;position: relative;">
+          <div style="padding-top:50px;position: relative;" class="Fade-Up">
             <div
               style="   padding:50px 15px 50px 15px; align-items: center;justify-content: center; position: inherit;">
               <div
-                style="height:auto 100%;max-height: 1500px; background-color: #ebebe7; width:100%;  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+                style="height:auto 100%;max-height: auto; background-color: #ebebe7; width:100%;  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
                 border-radius: 15px ; padding:0px 0px 50px 0px; ">
                 <div style="text-align: center; padding:50px 0px 50px 0px;">
                   <p
                     style="font-size:55px;font-weight: 700; letter-spacing: 2px;color:#000">仕組みは次のとおりです:</p>
                 </div>
-                <div
-                  style="display: flex;justify-content: space-between; padding:0px 45px 0px 45px;">
+                <div class
+                  style="display: flex;justify-content: space-between; padding:0px 45px 0px 45px;height:100%;">
                   <div
                     style=" width:100%;justify-content: center;align-items: center; ">
                     <div
@@ -1132,7 +1131,8 @@
         <div class="content-wrapper">
           <div
             style="display: flex;justify-content: space-between;height:100%;padding:50px 15px 50px 15px;">
-            <div style="width: 70%;height:700px; position:relative;">
+            <div style="width: 70%;height:700px; position:relative;"
+              class="Fade-Up">
               <div
                 style="position:absolute;top:-50px;left: -100px; ">
                 <div style="display: flex;flex-direction: column;">
@@ -1159,6 +1159,7 @@
               </div>
             </div>
             <div
+              class="Fade-Up"
               style="width: 100%;height: 700px; padding:50px  ;position:relative">
               <form>
                 <div class="row" style="display: flex; ">
@@ -1187,7 +1188,6 @@
                       style="padding:15px 5px 15px 5px; margin-top:5px;width:100%; border:1px solid #4d4a4a;border-radius: 5px;   ">
                   </div>
                 </div>
-
                 <div class="row" style="display: flex; padding-top:25px; ">
                   <div class="col"
                     style="width:100%;padding:0px 10px 0px 10px;background-color: #fff;">
@@ -1200,13 +1200,12 @@
                     </textarea>
                   </div>
                 </div>
-                <div class
+                <div class="Fade-Up"
                   style="display:flex;align-items: center;justify-content: center;margin-top:50px;  ">
                   <button class="button "
                     style="background-color: #ee6e29;color:#ffffff; padding:15px 50px 15px 50px;border:none;border-radius:25px;cursor:pointer;font-size:18px;">
                     提出する</button>
                 </div>
-
               </form>
             </div>
           </div>
@@ -1416,24 +1415,64 @@
   setInterval(function () {
     plusSlides(1)
   }, 8000);
-
-  document.addEventListener("click", e=> {
+  var dropdown_ = false;
+  $(window).scroll(function () {
+    let Fade_Up = document.querySelectorAll(".Fade-Up");
     
-    const isDropdownButton = e.target.matches("[data-dropdown-button]");
- 
-    if (!isDropdownButton && e.target.closest('[data-dropdown]') != null) return
+    
+    var triggerAt = 150;
+    
+    for(let i =0;i<Fade_Up.length;i++){
+      
+      var revealtop = Fade_Up[i].getBoundingClientRect().top;
+     var windowheight = window.innerHeight;
+      if (revealtop < windowheight - triggerAt) {
+        
+        Fade_Up[i].classList.add("Fade-Up-Active");
+      }
+      // else{
+       
+      //   Fade_Up[i].classList.remove("Fade-Up-Active");
+      // }
 
+    } 
+});
+  document.addEventListener("click", e=> {
+    let dropIcon = document.querySelectorAll(".dropdown-menu-icon");
+    const isDropdownButton = e.target.matches("[data-dropdown-button]");
+    // if(!isDropdownButton){
+    //   dropIcon[0].classList.remove('show');
+    // }
+
+    if (!isDropdownButton && e.target.closest('[data-dropdown]') != null){
+     
+      return
+    } 
+   
     // e.target.closest("[data-dropdown]") != null)  return
   
     let currentDropdown;
+    
     if(isDropdownButton){
       // console.log("its is")
       currentDropdown  = e.target.closest('[data-dropdown]')
       currentDropdown.classList.toggle('activeDropdown')
+      dropdown_ = !dropdown_;
+     
+     
+     let dropIcon = document.querySelectorAll(".dropdown-menu-icon");
+     
+     if(dropdown_){
+       dropIcon[0].classList.add('show');
+      
+     }else{ 
+       dropIcon[0].classList.remove('show');
+     }
     }
     document.querySelectorAll("[data-dropdown].activeDropdown").forEach(dropdown=>{
       if(dropdown ===currentDropdown) return
       dropdown.classList.remove('activeDropdown')
+      dropIcon[0].classList.remove('show');
     })
 
   })
@@ -1463,8 +1502,15 @@
           }
         } 
   }
-
+var name = "aaaa"
    
+function sample(){
+  var {a,b} = "samples";
+  console.log(a)
+
+}
+aaaaaa
+sample();
 
 
-</script>
+</script> 
